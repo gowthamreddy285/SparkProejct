@@ -1,0 +1,7 @@
+Threshold: 0.9
+Accuracy: 0.9984
+Precision: 0.1299
+Recall: 0.1136
+F1-score: 0.1212
+PR-AUC: 0.0564
+TP=10, FP=67, TN=90794, FN=78

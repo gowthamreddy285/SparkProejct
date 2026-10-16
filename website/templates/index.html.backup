@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RetailIQ | Purchase Prediction</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">R</div>
+        <div>
+          <strong>RetailIQ</strong>
+          <small>ANALYTICS PLATFORM</small>
+        </div>
+      </div>
+
+      <div class="nav-label">WORKSPACE</div>
+      <a class="nav-item active" href="#dashboard">▦ &nbsp; Dashboard</a>
+      <a class="nav-item" href="#predictor">◉ &nbsp; Purchase Predictor</a>
+      <a class="nav-item" href="#performance">▥ &nbsp; Model Performance</a>
+
+      <div class="sidebar-bottom">
+        <div class="status-dot"></div>
+        <div>
+          <strong>Local ML Engine</strong>
+          <small>PySpark Pipeline</small>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content" id="dashboard">
+      <header class="topbar">
+        <div>
+          <div class="eyebrow">ECOMMERCE INTELLIGENCE</div>
+          <h1>Purchase Prediction Dashboard</h1>
+          <p class="muted">
+            Analyze visitor behavior and estimate future purchase likelihood.
+          </p>
+        </div>
+        <div class="model-badge">
+          <span></span> Enhanced Logistic Regression
+        </div>
+      </header>
+
+      {% if not metrics.available %}
+      <section class="panel">
+        <h2>Metrics not available</h2>
+        <p class="muted">{{ metrics.message }}</p>
+      </section>
+      {% else %}
+
+      <section class="stats-grid">
+        <article class="stat-card">
+          <div class="stat-heading">TEST ACCURACY <span>↗</span></div>
+          <div class="stat-value">{{ "%.2f"|format(metrics.accuracy * 100) }}%</div>
+          <div class="stat-note">Measured on held-out test data</div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-heading">PRECISION <span>◎</span></div>
+          <div class="stat-value">{{ "%.2f"|format(metrics.precision * 100) }}%</div>
+          <div class="stat-note">
+            {{ metrics.tp }} true buyers among {{ metrics.tp + metrics.fp }} predicted
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-heading">RECALL <span>⌁</span></div>
+          <div class="stat-value">{{ "%.2f"|format(metrics.recall * 100) }}%</div>
+          <div class="stat-note">
+            {{ metrics.tp }} of {{ metrics.tp + metrics.fn }} actual buyers detected
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-heading">F1-SCORE <span>✳</span></div>
+          <div class="stat-value">{{ "%.4f"|format(metrics.f1) }}</div>
+          <div class="stat-note">Precision–recall balance</div>
+        </article>
+      </section>
+
+      <section class="content-grid" id="predictor">
+        <article class="panel form-panel">
+          <div class="panel-title">
+            <div>
+              <div class="eyebrow">LIVE INFERENCE</div>
+              <h2>Visitor Activity</h2>
+              <p class="muted">
+                Enter historical activity before the prediction cutoff.
+              </p>
+            </div>
+            <div class="panel-icon">⌁</div>
+          </div>
+
+          <form id="prediction-form">
+            <div class="form-grid">
+              <label>Product views
+                <input name="views" type="number" min="0" value="100" required>
+              </label>
+              <label>Add-to-cart events
+                <input name="carts" type="number" min="0" value="20" required>
+              </label>
+              <label>Total historical events
+                <input name="total_events" type="number" min="1" value="120" required>
+              </label>
+              <label>Unique items interacted with
+                <input name="unique_items" type="number" min="0" value="80" required>
+              </label>
+              <label>Unique items viewed
+                <input name="unique_viewed" type="number" min="0" value="75" required>
+              </label>
+              <label>Unique items added to cart
+                <input name="unique_carted" type="number" min="0" value="14" required>
+              </label>
+              <label>Days between first and last activity
+                <input name="days_active" type="number" min="0" step="0.1" value="3" required>
+              </label>
+              <label>Hours since last activity
+                <input name="hours_since_activity" type="number" min="0" step="0.1" value="25" required>
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" id="predict-button">
+                Predict Purchase Likelihood <span>→</span>
+              </button>
+              <button type="reset" class="secondary-button">Reset</button>
+            </div>
+            <p class="form-help">
+              Use consistent historical counts. Unique viewed/carted items may overlap.
+            </p>
+          </form>
+        </article>
+
+        <article class="panel result-panel">
+          <div class="eyebrow">MODEL OUTPUT</div>
+          <h2>Prediction Result</h2>
+          <p class="muted">Your prediction will appear here.</p>
+
+          <div id="empty-result" class="empty-state">
+            <div class="empty-icon">✧</div>
+            <h3>Ready for analysis</h3>
+            <p>Enter visitor activity and run the model to view its score.</p>
+          </div>
+
+          <div id="prediction-result" class="hidden">
+            <div class="score-label">MODEL SCORE</div>
+            <div class="score-number" id="score-number">—</div>
+            <div class="progress-track">
+              <div id="score-bar" class="progress-fill"></div>
+            </div>
+            <div id="prediction-label" class="prediction-label">—</div>
+            <div class="result-detail">
+              <span>Decision threshold</span>
+              <strong id="threshold-value">{{ "%.2f"|format(metrics.threshold) }}</strong>
+            </div>
+            <p class="disclaimer" id="prediction-note"></p>
+          </div>
+
+          <div id="error-message" class="error-message hidden"></div>
+        </article>
+      </section>
+
+      <section class="panel performance-panel" id="performance">
+        <div class="panel-title">
+          <div>
+            <div class="eyebrow">EVALUATION</div>
+            <h2>Model Performance</h2>
+            <p class="muted">
+              Results from the latest saved model comparison.
+            </p>
+          </div>
+        </div>
+
+        <div class="charts-grid">
+          <div class="chart-box">
+            <h3>Precision, Recall &amp; F1-score</h3>
+            <canvas id="metrics-chart"></canvas>
+          </div>
+
+          <div class="chart-box">
+            <h3>Enhanced Logistic Regression Confusion Matrix</h3>
+            <div class="matrix">
+              <div class="matrix-axis"></div>
+              <div class="matrix-axis">Predicted buyer</div>
+              <div class="matrix-axis">Predicted non-buyer</div>
+
+              <div class="matrix-axis">Actual buyer</div>
+              <div class="matrix-cell positive">
+                <small>True positive</small>
+                <strong>{{ metrics.tp }}</strong>
+              </div>
+              <div class="matrix-cell negative">
+                <small>False negative</small>
+                <strong>{{ metrics.fn }}</strong>
+              </div>
+
+              <div class="matrix-axis">Actual non-buyer</div>
+              <div class="matrix-cell negative">
+                <small>False positive</small>
+                <strong>{{ metrics.fp }}</strong>
+              </div>
+              <div class="matrix-cell positive">
+                <small>True negative</small>
+                <strong>{{ "{:,}".format(metrics.tn) }}</strong>
+              </div>
+            </div>
+            <p class="chart-footnote">
+              Counts from the latest recorded test evaluation.
+            </p>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Threshold</th>
+                <th>Accuracy</th>
+                <th>Precision</th>
+                <th>Recall</th>
+                <th>F1-score</th>
+                <th>PR-AUC</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for result in model_results %}
+              <tr class="{% if result.name == 'Enhanced Logistic Regression' %}highlight-row{% endif %}">
+                <td>{{ result.name }}</td>
+                <td>{{ "%.2f"|format(result.threshold) }}</td>
+                <td>{{ "%.2f"|format(result.accuracy * 100) }}%</td>
+                <td>{{ "%.2f"|format(result.precision * 100) }}%</td>
+                <td>{{ "%.2f"|format(result.recall * 100) }}%</td>
+                <td>{{ "%.4f"|format(result.f1) }}</td>
+                <td>{{ "%.4f"|format(result.pr_auc) }}</td>
+              </tr>
+              {% else %}
+              <tr>
+                <td colspan="7">No model comparison results found. Run the training script.</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+
+        <p class="disclaimer">
+          Accuracy can be misleading because non-buyers dominate this dataset.
+          PR-AUC and buyer detection metrics provide additional context.
+          Model scores are not calibrated purchase probabilities.
+        </p>
+      </section>
+      {% endif %}
+
+      <footer>
+        RetailIQ · Apache Spark ML · Retailrocket dataset · Academic project demo
+      </footer>
+    </main>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

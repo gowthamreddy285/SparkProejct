@@ -1,0 +1,365 @@
+26/10/15 09:24:15 WARN Utils: Your hostname, satwiq resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+26/10/15 09:24:15 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+26/10/15 09:24:15 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[Stage 1:>                                                        (0 + 12) / 12][Stage 1:====>                                                    (1 + 11) / 12][Stage 1:=========>                                               (2 + 10) / 12]                                                                                [Stage 2:>                (0 + 12) / 12][Stage 3:>                 (0 + 0) / 12][Stage 2:=>               (1 + 11) / 12][Stage 3:>                 (0 + 1) / 12][Stage 2:==>              (2 + 10) / 12][Stage 3:>                 (0 + 2) / 12][Stage 2:======>           (4 + 8) / 12][Stage 3:===>              (2 + 4) / 12][Stage 2:============>     (8 + 4) / 12][Stage 3:============>     (8 + 4) / 12][Stage 4:=============>    (9 + 3) / 12][Stage 5:==============>  (10 + 2) / 12][Stage 4:===========================================>              (9 + 3) / 12]                                                                                [Stage 4:====================================================>    (11 + 1) / 12][Stage 9:>                                                          (0 + 8) / 8][Stage 12:>                                                         (0 + 8) / 8]                                                                                2015-06-01 [train]: rows=307,559, buyers=121
+[Stage 27:===================================================>    (11 + 1) / 12][Stage 32:==============>                                           (2 + 6) / 8][Stage 35:>                                                         (0 + 8) / 8]                                                                                2015-06-15 [train]: rows=321,454, buyers=122
+26/10/15 09:24:41 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:41 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+[Stage 50:==============================================>         (10 + 2) / 12]26/10/15 09:24:43 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:43 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:43 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:43 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:43 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:43 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:43 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+[Stage 55:=======>                                                  (1 + 7) / 8][Stage 55:==============>                                           (2 + 6) / 8][Stage 58:>                                                         (0 + 8) / 8]                                                                                2015-07-01 [train]: rows=313,813, buyers=120
+26/10/15 09:24:47 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:47 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:47 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:47 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+[Stage 73:==============================================>         (10 + 2) / 12]26/10/15 09:24:48 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:48 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:48 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:48 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:48 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:48 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:48 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:48 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:48 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:48 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:48 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:48 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:48 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:48 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:48 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:48 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:48 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+[Stage 78:>                                                         (0 + 8) / 8]26/10/15 09:24:48 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:48 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+[Stage 81:>                                                         (0 + 8) / 8]                                                                                2015-07-15 [validation]: rows=336,429, buyers=109
+26/10/15 09:24:51 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:51 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:51 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:51 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+[Stage 96:==============================================>         (10 + 2) / 12]26/10/15 09:24:52 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:52 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:52 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:52 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:52 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:52 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:52 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:52 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:53 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+[Stage 101:>                                                        (0 + 8) / 8]26/10/15 09:24:53 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:53 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:53 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:53 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:53 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:53 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:53 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+[Stage 101:============================>                            (4 + 4) / 8]                                                                                2015-08-01 [validation]: rows=366,698, buyers=98
+26/10/15 09:24:55 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:55 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:55 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:55 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+[Stage 119:=====================================>                  (8 + 4) / 12][Stage 119:=============================================>         (10 + 2) / 12][Stage 119:==================================================>    (11 + 1) / 12]26/10/15 09:24:57 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:57 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:57 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:57 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:57 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:57 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:57 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:57 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+[Stage 124:>                                                        (0 + 8) / 8]26/10/15 09:24:57 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:57 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:57 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:57 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:57 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:57 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:57 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:57 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:57 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:57 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:57 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:57 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:57 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:57 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:57 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:57 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:57 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:24:57 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+[Stage 127:>                                                        (0 + 8) / 8]                                                                                2015-08-15 [test]: rows=339,363, buyers=94
+26/10/15 09:25:00 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:25:00 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:25:00 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:25:00 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+[Stage 142:=============================================>         (10 + 2) / 12][Stage 142:==================================================>    (11 + 1) / 12]26/10/15 09:25:01 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:25:01 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:25:01 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:25:01 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:25:01 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:25:01 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:25:01 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:25:01 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+[Stage 147:>                                                        (0 + 8) / 8]26/10/15 09:25:02 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:25:02 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:25:02 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:25:02 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:25:02 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:25:02 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:25:02 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/15 09:25:02 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+[Stage 150:>                                                        (0 + 8) / 8]                                                                                2015-09-01 [test]: rows=302,320, buyers=91
+
+Rows by split:
+[Stage 179:==============>                                       (15 + 12) / 56][Stage 179:====================>                                 (21 + 12) / 56][Stage 179:===========================================>          (45 + 11) / 56]                                                                                +----------+------+
+|     split| count|
++----------+------+
+|     train|942826|
+|validation|703127|
+|      test|641683|
++----------+------+
+
+Labels by split:
+[Stage 210:===========================================>          (45 + 11) / 56]                                                                                +----------+-----+------+
+|     split|label| count|
++----------+-----+------+
+|      test|  0.0|641498|
+|      test|  1.0|   185|
+|     train|  0.0|942463|
+|     train|  1.0|   363|
+|validation|  0.0|702920|
+|validation|  1.0|   207|
++----------+-----+------+
+
+Training: 363 buyers / 942463 non-buyers; validation buyers=207; test buyers=185
+26/10/15 09:25:11 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[Stage 365:===================>                                  (20 + 12) / 56][Stage 365:========================================>             (42 + 12) / 56][Stage 380:============================>                         (30 + 12) / 56]                                                                                [Stage 411:===========================================>          (45 + 11) / 56]                                                                                26/10/15 09:25:16 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.JNIBLAS
+26/10/15 09:25:16 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.VectorBLAS
+[Stage 859:=================================================>     (50 + 6) / 56]                                                                                [Stage 923:=======================>                              (24 + 12) / 56][Stage 923:========================>                             (25 + 12) / 56][Stage 923:=========================>                            (26 + 12) / 56][Stage 923:==========================>                           (27 + 12) / 56][Stage 923:===================================>                  (37 + 12) / 56][Stage 923:============================================>         (46 + 10) / 56][Stage 923:======================================================>(55 + 1) / 56][Stage 938:===========================================>          (45 + 11) / 56]                                                                                [Stage 969:=========================================>            (43 + 12) / 56]                                                                                [Stage 1062:==============================================>       (48 + 8) / 56]                                                                                [Stage 1093:========================================>            (43 + 12) / 56]                                                                                [Stage 1465:=====================================================>(55 + 1) / 56]                                                                                [Stage 1496:==========================================>          (45 + 11) / 56]                                                                                [Stage 1527:=======================================>             (42 + 14) / 56]                                                                                [Stage 1651:====================================================> (54 + 2) / 56]                                                                                [Stage 1713:================================================>     (50 + 6) / 56]                                                                                [Stage 1744:===================================>                 (38 + 13) / 56]                                                                                [Stage 1806:===============================================>      (49 + 7) / 56]                                                                                [Stage 1837:=====================================>               (40 + 14) / 56]                                                                                [Stage 1868:==============================================>       (48 + 8) / 56]                                                                                [Stage 1899:=========================================>           (44 + 12) / 56]                                                                                [Stage 1930:==============================================>       (48 + 8) / 56]                                                                                [Stage 1992:======================================>              (41 + 13) / 56]                                                                                [Stage 2085:=====================================>               (40 + 12) / 56]                                                                                [Stage 2147:=================================================>    (51 + 5) / 56]                                                                                [Stage 2178:===============================>                     (33 + 14) / 56]                                                                                [Stage 2209:==========================================>          (45 + 11) / 56]                                                                                [Stage 2426:=================================================>    (51 + 5) / 56]                                                                                [Stage 2488:================================>                    (34 + 16) / 56]                                                                                [Stage 2550:===================================>                 (37 + 13) / 56]                                                                                [Stage 2581:====================================>                (39 + 16) / 56]                                                                                [Stage 2674:==================================================>   (52 + 4) / 56]                                                                                [Stage 2736:===============================================>      (49 + 7) / 56]                                                                                [Stage 2767:===============================>                     (33 + 12) / 56][Stage 2767:===============================================>      (49 + 7) / 56]                                                                                [Stage 2798:====================================>                (39 + 12) / 56]                                                                                [Stage 2829:===========================================>         (46 + 10) / 56]                                                                                [Stage 2891:==========================================>          (45 + 11) / 56]                                                                                [Stage 2922:=============================================>        (47 + 9) / 56]                                                                                [Stage 2953:=====================================>               (40 + 13) / 56]                                                                                [Stage 2984:===================================>                 (37 + 12) / 56]                                                                                [Stage 3015:==========================================>          (45 + 11) / 56][Stage 3015:================================================>     (50 + 6) / 56]                                                                                [Stage 3046:=======================================>             (42 + 14) / 56]                                                                                [Stage 3108:=========================================>           (44 + 12) / 56]                                                                                [Stage 3139:===================================================>  (53 + 3) / 56]                                                                                [Stage 3170:==============================================>       (48 + 8) / 56]                                                                                [Stage 3201:=============================================>        (47 + 9) / 56]                                                                                [Stage 3232:=====================================>               (40 + 13) / 56][Stage 3232:=============================================>        (47 + 9) / 56]                                                                                [Stage 3263:==================================================>   (52 + 4) / 56]                                                                                [Stage 3294:=======================================>             (42 + 13) / 56]                                                                                [Stage 3325:==================================================>   (52 + 4) / 56]                                                                                [Stage 3356:==========================================>          (45 + 11) / 56][Stage 3356:==============================================>       (48 + 8) / 56]                                                                                [Stage 3418:===================================>                 (37 + 12) / 56][Stage 3418:===============================================>      (49 + 7) / 56][Stage 3418:================================================>     (50 + 6) / 56]                                                                                [Stage 3449:==========================================>          (45 + 11) / 56]                                                                                [Stage 3480:==============================================>       (48 + 8) / 56][Stage 3480:===============================================>      (49 + 7) / 56]                                                                                [Stage 3542:=======================================>             (42 + 12) / 56][Stage 3542:========================================>            (43 + 13) / 56]                                                                                [Stage 3604:====================================>                (39 + 12) / 56][Stage 3604:=====================================>               (40 + 13) / 56]                                                                                [Stage 3635:====================================>                (39 + 17) / 56][Stage 3635:===============================================>      (49 + 7) / 56]                                                                                [Stage 3697:======================================>              (41 + 13) / 56][Stage 3697:=============================================>        (47 + 9) / 56]                                                                                [Stage 3728:=============================================>        (47 + 9) / 56]                                                                                [Stage 3759:==============>                                      (15 + 14) / 56][Stage 3759:=========================>                           (27 + 12) / 56][Stage 3759:====================================>                (39 + 12) / 56][Stage 3759:=====================================>               (40 + 12) / 56][206.897s][warning][gc,alloc] Executor task launch worker for task 43.0 in stage 3759.0 (TID 8207): Retried waiting for GCLocker too often allocating 4 words
+26/10/15 09:27:41 WARN BlockManager: Block rdd_1453_43 could not be removed as it was not found on disk or in memory
+[Stage 3759:=======================================>             (42 + 12) / 56]26/10/15 09:27:41 ERROR Executor: Exception in task 43.0 in stage 3759.0 (TID 8207)
+java.lang.OutOfMemoryError: Java heap space
+	at org.apache.spark.unsafe.types.UTF8String.fromAddress(UTF8String.java:132)
+	at org.apache.spark.sql.catalyst.expressions.UnsafeRow.getUTF8String(UnsafeRow.java:382)
+	at org.apache.spark.sql.execution.columnar.STRING$.getField(ColumnType.scala:523)
+	at org.apache.spark.sql.execution.columnar.STRING$.getField(ColumnType.scala:494)
+	at org.apache.spark.sql.execution.columnar.compression.RunLengthEncoding$Encoder.gatherCompressibilityStats(compressionSchemes.scala:195)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder.$anonfun$gatherCompressibilityStats$1(CompressibleColumnBuilder.scala:74)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder.$anonfun$gatherCompressibilityStats$1$adapted(CompressibleColumnBuilder.scala:74)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder$$Lambda$3996/0x00007965e0fe1e18.apply(Unknown Source)
+	at scala.collection.immutable.List.foreach(List.scala:431)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder.gatherCompressibilityStats(CompressibleColumnBuilder.scala:74)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder.appendFrom(CompressibleColumnBuilder.scala:80)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder.appendFrom$(CompressibleColumnBuilder.scala:77)
+	at org.apache.spark.sql.execution.columnar.NativeColumnBuilder.appendFrom(ColumnBuilder.scala:99)
+	at org.apache.spark.sql.execution.columnar.DefaultCachedBatchSerializer$$anon$1.next(InMemoryRelation.scala:105)
+	at org.apache.spark.sql.execution.columnar.DefaultCachedBatchSerializer$$anon$1.next(InMemoryRelation.scala:80)
+	at org.apache.spark.sql.execution.columnar.CachedRDDBuilder$$anon$2.next(InMemoryRelation.scala:277)
+	at org.apache.spark.sql.execution.columnar.CachedRDDBuilder$$anon$2.next(InMemoryRelation.scala:274)
+	at org.apache.spark.storage.memory.MemoryStore.putIterator(MemoryStore.scala:224)
+	at org.apache.spark.storage.memory.MemoryStore.putIteratorAsValues(MemoryStore.scala:302)
+	at org.apache.spark.storage.BlockManager.$anonfun$doPutIterator$1(BlockManager.scala:1597)
+	at org.apache.spark.storage.BlockManager$$Lambda$2356/0x00007965e0cf6980.apply(Unknown Source)
+	at org.apache.spark.storage.BlockManager.org$apache$spark$storage$BlockManager$$doPut(BlockManager.scala:1524)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:1588)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:1389)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdateRDDBlock(BlockManager.scala:1343)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:379)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:329)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:166)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:621)
+	at org.apache.spark.executor.Executor$TaskRunner$$Lambda$2716/0x00007965e0dc52f0.apply(Unknown Source)
+26/10/15 09:27:41 ERROR SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 43.0 in stage 3759.0 (TID 8207),5,main]
+java.lang.OutOfMemoryError: Java heap space
+	at org.apache.spark.unsafe.types.UTF8String.fromAddress(UTF8String.java:132)
+	at org.apache.spark.sql.catalyst.expressions.UnsafeRow.getUTF8String(UnsafeRow.java:382)
+	at org.apache.spark.sql.execution.columnar.STRING$.getField(ColumnType.scala:523)
+	at org.apache.spark.sql.execution.columnar.STRING$.getField(ColumnType.scala:494)
+	at org.apache.spark.sql.execution.columnar.compression.RunLengthEncoding$Encoder.gatherCompressibilityStats(compressionSchemes.scala:195)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder.$anonfun$gatherCompressibilityStats$1(CompressibleColumnBuilder.scala:74)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder.$anonfun$gatherCompressibilityStats$1$adapted(CompressibleColumnBuilder.scala:74)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder$$Lambda$3996/0x00007965e0fe1e18.apply(Unknown Source)
+	at scala.collection.immutable.List.foreach(List.scala:431)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder.gatherCompressibilityStats(CompressibleColumnBuilder.scala:74)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder.appendFrom(CompressibleColumnBuilder.scala:80)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder.appendFrom$(CompressibleColumnBuilder.scala:77)
+	at org.apache.spark.sql.execution.columnar.NativeColumnBuilder.appendFrom(ColumnBuilder.scala:99)
+	at org.apache.spark.sql.execution.columnar.DefaultCachedBatchSerializer$$anon$1.next(InMemoryRelation.scala:105)
+	at org.apache.spark.sql.execution.columnar.DefaultCachedBatchSerializer$$anon$1.next(InMemoryRelation.scala:80)
+	at org.apache.spark.sql.execution.columnar.CachedRDDBuilder$$anon$2.next(InMemoryRelation.scala:277)
+	at org.apache.spark.sql.execution.columnar.CachedRDDBuilder$$anon$2.next(InMemoryRelation.scala:274)
+	at org.apache.spark.storage.memory.MemoryStore.putIterator(MemoryStore.scala:224)
+	at org.apache.spark.storage.memory.MemoryStore.putIteratorAsValues(MemoryStore.scala:302)
+	at org.apache.spark.storage.BlockManager.$anonfun$doPutIterator$1(BlockManager.scala:1597)
+	at org.apache.spark.storage.BlockManager$$Lambda$2356/0x00007965e0cf6980.apply(Unknown Source)
+	at org.apache.spark.storage.BlockManager.org$apache$spark$storage$BlockManager$$doPut(BlockManager.scala:1524)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:1588)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:1389)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdateRDDBlock(BlockManager.scala:1343)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:379)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:329)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:166)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:621)
+	at org.apache.spark.executor.Executor$TaskRunner$$Lambda$2716/0x00007965e0dc52f0.apply(Unknown Source)
+26/10/15 09:27:41 WARN TaskSetManager: Lost task 43.0 in stage 3759.0 (TID 8207) (10.255.255.254 executor driver): java.lang.OutOfMemoryError: Java heap space
+	at org.apache.spark.unsafe.types.UTF8String.fromAddress(UTF8String.java:132)
+	at org.apache.spark.sql.catalyst.expressions.UnsafeRow.getUTF8String(UnsafeRow.java:382)
+	at org.apache.spark.sql.execution.columnar.STRING$.getField(ColumnType.scala:523)
+	at org.apache.spark.sql.execution.columnar.STRING$.getField(ColumnType.scala:494)
+	at org.apache.spark.sql.execution.columnar.compression.RunLengthEncoding$Encoder.gatherCompressibilityStats(compressionSchemes.scala:195)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder.$anonfun$gatherCompressibilityStats$1(CompressibleColumnBuilder.scala:74)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder.$anonfun$gatherCompressibilityStats$1$adapted(CompressibleColumnBuilder.scala:74)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder$$Lambda$3996/0x00007965e0fe1e18.apply(Unknown Source)
+	at scala.collection.immutable.List.foreach(List.scala:431)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder.gatherCompressibilityStats(CompressibleColumnBuilder.scala:74)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder.appendFrom(CompressibleColumnBuilder.scala:80)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder.appendFrom$(CompressibleColumnBuilder.scala:77)
+	at org.apache.spark.sql.execution.columnar.NativeColumnBuilder.appendFrom(ColumnBuilder.scala:99)
+	at org.apache.spark.sql.execution.columnar.DefaultCachedBatchSerializer$$anon$1.next(InMemoryRelation.scala:105)
+	at org.apache.spark.sql.execution.columnar.DefaultCachedBatchSerializer$$anon$1.next(InMemoryRelation.scala:80)
+	at org.apache.spark.sql.execution.columnar.CachedRDDBuilder$$anon$2.next(InMemoryRelation.scala:277)
+	at org.apache.spark.sql.execution.columnar.CachedRDDBuilder$$anon$2.next(InMemoryRelation.scala:274)
+	at org.apache.spark.storage.memory.MemoryStore.putIterator(MemoryStore.scala:224)
+	at org.apache.spark.storage.memory.MemoryStore.putIteratorAsValues(MemoryStore.scala:302)
+	at org.apache.spark.storage.BlockManager.$anonfun$doPutIterator$1(BlockManager.scala:1597)
+	at org.apache.spark.storage.BlockManager$$Lambda$2356/0x00007965e0cf6980.apply(Unknown Source)
+	at org.apache.spark.storage.BlockManager.org$apache$spark$storage$BlockManager$$doPut(BlockManager.scala:1524)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:1588)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:1389)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdateRDDBlock(BlockManager.scala:1343)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:379)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:329)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:166)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:621)
+	at org.apache.spark.executor.Executor$TaskRunner$$Lambda$2716/0x00007965e0dc52f0.apply(Unknown Source)
+
+26/10/15 09:27:41 ERROR TaskSetManager: Task 43 in stage 3759.0 failed 1 times; aborting job
+[Stage 3759:=================================================>    (51 + 4) / 56]26/10/15 09:27:41 WARN BlockManager: Putting block rdd_1453_52 failed due to exception org.apache.spark.TaskKilledException.
+26/10/15 09:27:41 WARN BlockManager: Block rdd_1453_52 could not be removed as it was not found on disk or in memory
+26/10/15 09:27:41 WARN BlockManager: Putting block rdd_1453_55 failed due to exception org.apache.spark.TaskKilledException.
+26/10/15 09:27:41 WARN BlockManager: Block rdd_1453_55 could not be removed as it was not found on disk or in memory
+26/10/15 09:27:41 WARN BlockManager: Putting block rdd_1453_54 failed due to exception org.apache.spark.TaskKilledException.
+26/10/15 09:27:41 WARN BlockManager: Putting block rdd_1453_53 failed due to exception org.apache.spark.TaskKilledException.
+26/10/15 09:27:41 WARN BlockManager: Block rdd_1453_53 could not be removed as it was not found on disk or in memory
+26/10/15 09:27:41 WARN BlockManager: Block rdd_1453_54 could not be removed as it was not found on disk or in memory
+Traceback (most recent call last):
+  File "/home/satwiqreddy/SparkProject/python/temporal_purchase_model.py", line 299, in <module>
+    ).first()
+      ^^^^^^^
+  File "/home/satwiqreddy/SparkProject/.venv/lib/python3.12/site-packages/pyspark/sql/dataframe.py", line 2996, in first
+    return self.head()
+           ^^^^^^^^^^^
+  File "/home/satwiqreddy/SparkProject/.venv/lib/python3.12/site-packages/pyspark/sql/dataframe.py", line 2972, in head
+    rs = self.head(1)
+         ^^^^^^^^^^^^
+  File "/home/satwiqreddy/SparkProject/.venv/lib/python3.12/site-packages/pyspark/sql/dataframe.py", line 2974, in head
+    return self.take(n)
+           ^^^^^^^^^^^^
+  File "/home/satwiqreddy/SparkProject/.venv/lib/python3.12/site-packages/pyspark/sql/dataframe.py", line 1406, in take
+    return self.limit(num).collect()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/satwiqreddy/SparkProject/.venv/lib/python3.12/site-packages/pyspark/sql/dataframe.py", line 1262, in collect
+    sock_info = self._jdf.collectToPython()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/satwiqreddy/SparkProject/.venv/lib/python3.12/site-packages/py4j/java_gateway.py", line 1362, in __call__
+    return_value = get_return_value(
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/satwiqreddy/SparkProject/.venv/lib/python3.12/site-packages/pyspark/errors/exceptions/captured.py", line 179, in deco
+    return f(*a, **kw)
+           ^^^^^^^^^^^
+  File "/home/satwiqreddy/SparkProject/.venv/lib/python3.12/site-packages/py4j/protocol.py", line 327, in get_return_value
+    raise Py4JJavaError(
+py4j.protocol.Py4JJavaError: An error occurred while calling o5230.collectToPython.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 43 in stage 3759.0 failed 1 times, most recent failure: Lost task 43.0 in stage 3759.0 (TID 8207) (10.255.255.254 executor driver): java.lang.OutOfMemoryError: Java heap space
+	at org.apache.spark.unsafe.types.UTF8String.fromAddress(UTF8String.java:132)
+	at org.apache.spark.sql.catalyst.expressions.UnsafeRow.getUTF8String(UnsafeRow.java:382)
+	at org.apache.spark.sql.execution.columnar.STRING$.getField(ColumnType.scala:523)
+	at org.apache.spark.sql.execution.columnar.STRING$.getField(ColumnType.scala:494)
+	at org.apache.spark.sql.execution.columnar.compression.RunLengthEncoding$Encoder.gatherCompressibilityStats(compressionSchemes.scala:195)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder.$anonfun$gatherCompressibilityStats$1(CompressibleColumnBuilder.scala:74)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder.$anonfun$gatherCompressibilityStats$1$adapted(CompressibleColumnBuilder.scala:74)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder$$Lambda$3996/0x00007965e0fe1e18.apply(Unknown Source)
+	at scala.collection.immutable.List.foreach(List.scala:431)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder.gatherCompressibilityStats(CompressibleColumnBuilder.scala:74)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder.appendFrom(CompressibleColumnBuilder.scala:80)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder.appendFrom$(CompressibleColumnBuilder.scala:77)
+	at org.apache.spark.sql.execution.columnar.NativeColumnBuilder.appendFrom(ColumnBuilder.scala:99)
+	at org.apache.spark.sql.execution.columnar.DefaultCachedBatchSerializer$$anon$1.next(InMemoryRelation.scala:105)
+	at org.apache.spark.sql.execution.columnar.DefaultCachedBatchSerializer$$anon$1.next(InMemoryRelation.scala:80)
+	at org.apache.spark.sql.execution.columnar.CachedRDDBuilder$$anon$2.next(InMemoryRelation.scala:277)
+	at org.apache.spark.sql.execution.columnar.CachedRDDBuilder$$anon$2.next(InMemoryRelation.scala:274)
+	at org.apache.spark.storage.memory.MemoryStore.putIterator(MemoryStore.scala:224)
+	at org.apache.spark.storage.memory.MemoryStore.putIteratorAsValues(MemoryStore.scala:302)
+	at org.apache.spark.storage.BlockManager.$anonfun$doPutIterator$1(BlockManager.scala:1597)
+	at org.apache.spark.storage.BlockManager$$Lambda$2356/0x00007965e0cf6980.apply(Unknown Source)
+	at org.apache.spark.storage.BlockManager.org$apache$spark$storage$BlockManager$$doPut(BlockManager.scala:1524)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:1588)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:1389)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdateRDDBlock(BlockManager.scala:1343)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:379)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:329)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:166)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:621)
+	at org.apache.spark.executor.Executor$TaskRunner$$Lambda$2716/0x00007965e0dc52f0.apply(Unknown Source)
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2898)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2834)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2833)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2833)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1253)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1253)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1253)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:3102)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:3036)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:3025)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+	at org.apache.spark.unsafe.types.UTF8String.fromAddress(UTF8String.java:132)
+	at org.apache.spark.sql.catalyst.expressions.UnsafeRow.getUTF8String(UnsafeRow.java:382)
+	at org.apache.spark.sql.execution.columnar.STRING$.getField(ColumnType.scala:523)
+	at org.apache.spark.sql.execution.columnar.STRING$.getField(ColumnType.scala:494)
+	at org.apache.spark.sql.execution.columnar.compression.RunLengthEncoding$Encoder.gatherCompressibilityStats(compressionSchemes.scala:195)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder.$anonfun$gatherCompressibilityStats$1(CompressibleColumnBuilder.scala:74)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder.$anonfun$gatherCompressibilityStats$1$adapted(CompressibleColumnBuilder.scala:74)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder$$Lambda$3996/0x00007965e0fe1e18.apply(Unknown Source)
+	at scala.collection.immutable.List.foreach(List.scala:431)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder.gatherCompressibilityStats(CompressibleColumnBuilder.scala:74)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder.appendFrom(CompressibleColumnBuilder.scala:80)
+	at org.apache.spark.sql.execution.columnar.compression.CompressibleColumnBuilder.appendFrom$(CompressibleColumnBuilder.scala:77)
+	at org.apache.spark.sql.execution.columnar.NativeColumnBuilder.appendFrom(ColumnBuilder.scala:99)
+	at org.apache.spark.sql.execution.columnar.DefaultCachedBatchSerializer$$anon$1.next(InMemoryRelation.scala:105)
+	at org.apache.spark.sql.execution.columnar.DefaultCachedBatchSerializer$$anon$1.next(InMemoryRelation.scala:80)
+	at org.apache.spark.sql.execution.columnar.CachedRDDBuilder$$anon$2.next(InMemoryRelation.scala:277)
+	at org.apache.spark.sql.execution.columnar.CachedRDDBuilder$$anon$2.next(InMemoryRelation.scala:274)
+	at org.apache.spark.storage.memory.MemoryStore.putIterator(MemoryStore.scala:224)
+	at org.apache.spark.storage.memory.MemoryStore.putIteratorAsValues(MemoryStore.scala:302)
+	at org.apache.spark.storage.BlockManager.$anonfun$doPutIterator$1(BlockManager.scala:1597)
+	at org.apache.spark.storage.BlockManager$$Lambda$2356/0x00007965e0cf6980.apply(Unknown Source)
+	at org.apache.spark.storage.BlockManager.org$apache$spark$storage$BlockManager$$doPut(BlockManager.scala:1524)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:1588)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:1389)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdateRDDBlock(BlockManager.scala:1343)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:379)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:329)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:166)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:621)
+	at org.apache.spark.executor.Executor$TaskRunner$$Lambda$2716/0x00007965e0dc52f0.apply(Unknown Source)
+

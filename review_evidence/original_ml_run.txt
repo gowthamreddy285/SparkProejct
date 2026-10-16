@@ -1,0 +1,142 @@
+26/10/16 17:27:45 WARN Utils: Your hostname, satwiq resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+26/10/16 17:27:45 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+26/10/16 17:27:46 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/10/16 17:27:48 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+[Stage 0:>                                                          (0 + 1) / 1]                                                                                [Stage 1:>                                                        (0 + 12) / 12][Stage 1:====>                                                    (1 + 11) / 12]                                                                                [Stage 5:>                                                        (0 + 12) / 12][Stage 5:====>                                                    (1 + 11) / 12][Stage 5:==============>                                           (3 + 9) / 12]                                                                                [Stage 11:>                                                       (0 + 12) / 12][Stage 11:====>                                                   (1 + 11) / 12][Stage 11:=========>                                              (2 + 10) / 12][Stage 11:===================>                                     (4 + 8) / 12]                                                                                [Stage 14:>                                                       (0 + 12) / 12][Stage 14:====>                                                   (1 + 11) / 12][Stage 14:===================>                                     (4 + 8) / 12]                                                                                [Stage 20:>                                                       (0 + 12) / 12][Stage 20:====>                                                   (1 + 11) / 12][Stage 20:==============>                                          (3 + 9) / 12][Stage 22:>                                                       (0 + 12) / 12]                                                                                [Stage 26:====>                                                   (1 + 11) / 12][Stage 26:==============================================>         (10 + 2) / 12][Stage 28:=================================>                       (7 + 5) / 12]                                                                                [Stage 32:====>                                                   (1 + 11) / 12][Stage 32:===================>                                     (4 + 8) / 12]                                                                                [Stage 38:====>                                                   (1 + 11) / 12][Stage 38:=======================>                                 (5 + 7) / 12]                                                                                [Stage 44:====>                                                   (1 + 11) / 12][Stage 44:=========>                                              (2 + 10) / 12][Stage 46:>                                                       (0 + 12) / 12][Stage 46:=================================>                       (7 + 5) / 12]                                                                                [Stage 50:====>                                                   (1 + 11) / 12][Stage 50:=========>                                              (2 + 10) / 12][Stage 50:=======================>                                 (5 + 7) / 12][Stage 51:>                                                       (0 + 12) / 12][Stage 51:====>                                                   (1 + 11) / 12][Stage 51:===================>                                     (4 + 8) / 12][Stage 53:>                                                       (0 + 12) / 12][Stage 53:====>                                                   (1 + 11) / 12][Stage 53:=========>                                              (2 + 10) / 12][Stage 53:======================================>                  (8 + 4) / 12]                                                                                26/10/16 17:28:25 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.JNIBLAS
+26/10/16 17:28:25 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.VectorBLAS
+[Stage 56:>                                                       (0 + 12) / 12][Stage 56:===================>                                     (4 + 8) / 12]                                                                                [Stage 85:>                                                       (0 + 12) / 12][Stage 85:====>                                                   (1 + 11) / 12][Stage 85:==============>                                          (3 + 9) / 12][Stage 85:=================================>                       (7 + 5) / 12][Stage 86:>                                                       (0 + 12) / 12][Stage 86:====>                                                   (1 + 11) / 12][Stage 86:==============>                                          (3 + 9) / 12][Stage 86:============================>                            (6 + 6) / 12][Stage 87:>                                                       (0 + 12) / 12][Stage 87:==============>                                          (3 + 9) / 12][Stage 87:===================>                                     (4 + 8) / 12][Stage 87:=================================>                       (7 + 5) / 12]                                                                                [Stage 90:====>                                                   (1 + 11) / 12][Stage 90:==============>                                          (3 + 9) / 12][Stage 90:============================>                            (6 + 6) / 12]/home/satwiqreddy/SparkProject/.venv/lib/python3.12/site-packages/pyspark/sql/context.py:158: FutureWarning: Deprecated in 3.0.0. Use SparkSession.builder.getOrCreate() instead.
+  warnings.warn(
+[Stage 92:>                                                         (0 + 1) / 1]                                                                                [Stage 94:>                                                       (0 + 12) / 12][Stage 94:====>                                                   (1 + 11) / 12][Stage 94:=======================>                                 (5 + 7) / 12]                                                                                [Stage 96:====>                                                   (1 + 11) / 12][Stage 96:=========>                                              (2 + 10) / 12][Stage 96:=================================>                       (7 + 5) / 12][Stage 97:====>                                                   (1 + 11) / 12][Stage 97:=========>                                              (2 + 10) / 12][Stage 97:===================>                                     (4 + 8) / 12][Stage 99:>                                                       (0 + 12) / 12][Stage 99:==============>                                          (3 + 9) / 12]                                                                                [Stage 103:====>                                                  (1 + 11) / 12][Stage 103:==============>                                         (3 + 9) / 12]                                                                                [Stage 109:>                                                      (0 + 12) / 12][Stage 109:==================================================>    (11 + 1) / 12]                                                                                [Stage 112:>                                                      (0 + 12) / 12]26/10/16 17:28:48 WARN MemoryStore: Not enough space to cache rdd_250_1 in memory! (computed 18.5 MiB so far)
+26/10/16 17:28:48 WARN BlockManager: Persisting block rdd_250_1 to disk instead.
+26/10/16 17:28:48 WARN MemoryStore: Not enough space to cache rdd_250_3 in memory! (computed 18.5 MiB so far)
+26/10/16 17:28:48 WARN BlockManager: Persisting block rdd_250_3 to disk instead.
+26/10/16 17:28:48 WARN MemoryStore: Not enough space to cache rdd_250_10 in memory! (computed 18.5 MiB so far)
+26/10/16 17:28:48 WARN BlockManager: Persisting block rdd_250_10 to disk instead.
+[Stage 112:==============>                                         (3 + 9) / 12][Stage 112:================================>                       (7 + 5) / 12][Stage 112:=============================================>         (10 + 2) / 12]                                                                                [Stage 115:>                                                      (0 + 12) / 12][Stage 115:==============>                                         (3 + 9) / 12][Stage 115:=============================================>         (10 + 2) / 12]                                                                                [Stage 118:>                                                      (0 + 12) / 12][Stage 118:==============>                                         (3 + 9) / 12][Stage 118:=======================>                                (5 + 7) / 12]                                                                                [Stage 121:>                                                      (0 + 12) / 12][Stage 121:==================>                                     (4 + 8) / 12][Stage 121:==================================================>    (11 + 1) / 12]                                                                                [Stage 124:>                                                      (0 + 12) / 12][Stage 124:============================>                           (6 + 6) / 12][Stage 124:==================================================>    (11 + 1) / 12]                                                                                [Stage 127:>                                                      (0 + 12) / 12][Stage 127:==================>                                     (4 + 8) / 12][Stage 127:==========================================>             (9 + 3) / 12][Stage 127:==================================================>    (11 + 1) / 12]                                                                                [Stage 130:>                                                      (0 + 12) / 12][Stage 130:============================>                           (6 + 6) / 12][Stage 130:==================================================>    (11 + 1) / 12]                                                                                [Stage 133:>                                                      (0 + 12) / 12][Stage 133:====>                                                  (1 + 11) / 12][Stage 133:==========================================>             (9 + 3) / 12][Stage 133:==================================================>    (11 + 1) / 12]                                                                                [Stage 135:====>                                                  (1 + 11) / 12][Stage 136:>                                                      (0 + 12) / 12][Stage 136:====>                                                  (1 + 11) / 12][Stage 136:==============>                                         (3 + 9) / 12][Stage 137:====>                                                  (1 + 11) / 12][Stage 137:==============>                                         (3 + 9) / 12]                                                                                [Stage 140:====>                                                  (1 + 11) / 12][Stage 140:==================>                                     (4 + 8) / 12]/home/satwiqreddy/SparkProject/.venv/lib/python3.12/site-packages/pyspark/sql/context.py:158: FutureWarning: Deprecated in 3.0.0. Use SparkSession.builder.getOrCreate() instead.
+  warnings.warn(
+                                                                                [Stage 144:>                                                      (0 + 12) / 12][Stage 144:==================>                                     (4 + 8) / 12][Stage 144:==================================================>    (11 + 1) / 12]                                                                                
+========== TASK 3.1: DATA LOADING ==========
+Total records: 2756101
+
+========== TASK 3.2: FEATURE PREPARATION ==========
+Number of visitors: 1407580
+Feature columns: total_events, view_count, cart_count
+Label: 1 = transaction recorded, 0 = no transaction recorded
+
+Sample prepared data:
++---------+------------+----------+----------+-----+
+|visitorid|total_events|view_count|cart_count|label|
++---------+------------+----------+----------+-----+
+|361387   |15          |13        |0         |1.0  |
+|1282360  |5           |5         |0         |0.0  |
+|1354794  |1           |1         |0         |0.0  |
+|126191   |1           |1         |0         |0.0  |
+|957827   |1           |1         |0         |0.0  |
+|95994    |3           |2         |1         |0.0  |
+|1105097  |117         |117       |0         |0.0  |
+|1048223  |5           |5         |0         |0.0  |
+|1211143  |1           |1         |0         |0.0  |
+|1117990  |1           |1         |0         |0.0  |
++---------+------------+----------+----------+-----+
+only showing top 10 rows
+
+
+Label distribution:
++-----+-------+
+|label|  count|
++-----+-------+
+|  0.0|1395861|
+|  1.0|  11719|
++-----+-------+
+
+
+========== TASK 3.3: TRAIN-TEST SPLIT ==========
+Training records: 1126470
+Testing records: 281110
+
+Training label distribution:
++-----+-------+
+|label|  count|
++-----+-------+
+|  0.0|1117042|
+|  1.0|   9428|
++-----+-------+
+
+
+Testing label distribution:
++-----+------+
+|label| count|
++-----+------+
+|  0.0|278819|
+|  1.0|  2291|
++-----+------+
+
+
+========== TASK 3.4: MODEL TRAINING ==========
+Logistic Regression model trained successfully.
+
+Sample predictions:
++------------+----------+----------+-----+----------+------------------------------------------+
+|total_events|view_count|cart_count|label|prediction|probability                               |
++------------+----------+----------+-----+----------+------------------------------------------+
+|1           |1         |0         |0.0  |0.0       |[0.9928119713419407,0.007188028658059342] |
+|2           |2         |0         |0.0  |0.0       |[0.9926277529510682,0.0073722470489318015]|
+|1           |1         |0         |0.0  |0.0       |[0.9928119713419407,0.007188028658059342] |
+|1           |1         |0         |0.0  |0.0       |[0.9928119713419407,0.007188028658059342] |
+|1           |1         |0         |0.0  |0.0       |[0.9928119713419407,0.007188028658059342] |
+|2           |2         |0         |0.0  |0.0       |[0.9926277529510682,0.0073722470489318015]|
+|1           |1         |0         |0.0  |0.0       |[0.9928119713419407,0.007188028658059342] |
+|1           |1         |0         |0.0  |0.0       |[0.9928119713419407,0.007188028658059342] |
+|2           |1         |1         |0.0  |0.0       |[0.9868633301089182,0.013136669891081754] |
+|1           |1         |0         |0.0  |0.0       |[0.9928119713419407,0.007188028658059342] |
++------------+----------+----------+-----+----------+------------------------------------------+
+only showing top 10 rows
+
+
+========== TASK 3.5: MODEL EVALUATION ==========
+Accuracy:  0.9919 (99.19%)
+Precision: 0.5051
+Recall:    0.0432
+F1-score:  0.0796
+
+Confusion Matrix:
+[[2.78722e+05 9.70000e+01]
+ [2.19200e+03 9.90000e+01]]
+
+========== TASK 3.6: RANDOM FOREST MODEL ==========
+Random Forest model trained successfully.
+
+Sample Random Forest predictions:
++------------+----------+----------+-----+----------+
+|total_events|view_count|cart_count|label|prediction|
++------------+----------+----------+-----+----------+
+|1           |1         |0         |0.0  |0.0       |
+|2           |2         |0         |0.0  |0.0       |
+|1           |1         |0         |0.0  |0.0       |
+|1           |1         |0         |0.0  |0.0       |
+|1           |1         |0         |0.0  |0.0       |
+|2           |2         |0         |0.0  |0.0       |
+|1           |1         |0         |0.0  |0.0       |
+|1           |1         |0         |0.0  |0.0       |
+|2           |1         |1         |0.0  |0.0       |
+|1           |1         |0         |0.0  |0.0       |
++------------+----------+----------+-----+----------+
+only showing top 10 rows
+
+
+========== RANDOM FOREST EVALUATION ==========
+Accuracy:  0.9967 (99.67%)
+Precision: 0.9240
+Recall:    0.6478
+F1-score:  0.7616
+
+Random Forest Confusion Matrix:
+[[2.78697e+05 1.22000e+02]
+ [8.07000e+02 1.48400e+03]]
+
+========== MODEL COMPARISON ==========
+Model                  Accuracy   Precision   Recall     F1-score
+Logistic Regression   0.9919     0.5051      0.0432    0.0796
+Random Forest         0.9967     0.9240      0.6478    0.7616

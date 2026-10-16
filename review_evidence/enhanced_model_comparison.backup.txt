@@ -1,0 +1,3 @@
+Enhanced Logistic Regression | threshold=0.95 | accuracy=0.9984 | precision=0.1842 | recall=0.1429 | F1=0.1609 | PR-AUC=0.0354 | TP=14 FP=62 TN=90789 FN=84
+Enhanced Random Forest | threshold=0.94 | accuracy=0.9967 | precision=0.0526 | recall=0.1224 | F1=0.0736 | PR-AUC=0.0341 | TP=12 FP=216 TN=90635 FN=86
+Enhanced GBT | threshold=0.95 | accuracy=0.9940 | precision=0.0389 | recall=0.1939 | F1=0.0647 | PR-AUC=0.0135 | TP=19 FP=470 TN=90381 FN=79

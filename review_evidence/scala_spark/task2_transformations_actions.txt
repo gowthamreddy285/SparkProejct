@@ -1,0 +1,37 @@
+
+========== TASK 1: RDD CREATION ==========
+RDD created successfully
+Total lines including header: 2756102
+CSV header: timestamp,visitorid,event,itemid,transactionid
+Number of input partitions: 3
+Data records excluding header: 2756101
+Sample data record: 1433221332117,257597,view,355908,
+
+========== TASK 2: TRANSFORMATIONS ==========
+Transformation 1: filter()
+Non-empty records: 2756101
+
+Transformation 2: map()
+Parsed record example: 1433221332117 | 257597 | view | 355908 |
+
+Transformation 3: flatMap()
+Event type sample: view, view, view, view, view
+
+Transformation 4: distinct()
+Unique event types: addtocart, transaction, view
+
+Transformation 5: reduceByKey()
+Event counts by type:
+(addtocart,69332)
+(transaction,22457)
+(view,2664312)
+
+========== TASK 3: ACTIONS ==========
+Action 1 - count(): 2756101
+Action 2 - take():
+1433221332117,257597,view,355908,
+1433224214164,992329,view,248676,
+1433221999827,111016,view,318965,
+Action 3 - reduce(): 2756101
+
+All transformations and actions completed.

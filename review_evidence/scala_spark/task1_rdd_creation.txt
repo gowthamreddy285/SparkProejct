@@ -1,0 +1,12 @@
+TASK 1: RDD CREATION
+
+RDD created successfully
+Total lines including header: 2756102
+CSV header: timestamp,visitorid,event,itemid,transactionid
+Number of input partitions: 3
+
+Conclusion:
+The Retailrocket events.csv dataset was successfully loaded
+into an RDD using SparkContext.textFile().
+Spark created 3 input partitions for parallel processing.
+The dataset contains 2,756,101 event records, excluding the header.

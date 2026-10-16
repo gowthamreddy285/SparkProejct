@@ -1,0 +1,87 @@
+26/10/14 11:31:21 WARN Utils: Your hostname, satwiq resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+26/10/14 11:31:21 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/10/14 11:31:22 INFO SparkContext: Running Spark version 3.5.8
+26/10/14 11:31:22 INFO SparkContext: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+26/10/14 11:31:22 INFO SparkContext: Java version 17.0.20.1
+26/10/14 11:31:22 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/10/14 11:31:22 INFO ResourceUtils: ==============================================================
+26/10/14 11:31:22 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/10/14 11:31:22 INFO ResourceUtils: ==============================================================
+26/10/14 11:31:22 INFO SparkContext: Submitted application: PurchaseFeatureAnalysis
+26/10/14 11:31:22 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/10/14 11:31:22 INFO ResourceProfile: Limiting resource is cpu
+26/10/14 11:31:22 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/10/14 11:31:22 INFO SecurityManager: Changing view acls to: satwiqreddy
+26/10/14 11:31:22 INFO SecurityManager: Changing modify acls to: satwiqreddy
+26/10/14 11:31:22 INFO SecurityManager: Changing view acls groups to: 
+26/10/14 11:31:22 INFO SecurityManager: Changing modify acls groups to: 
+26/10/14 11:31:22 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: satwiqreddy; groups with view permissions: EMPTY; users with modify permissions: satwiqreddy; groups with modify permissions: EMPTY
+26/10/14 11:31:23 INFO Utils: Successfully started service 'sparkDriver' on port 44535.
+26/10/14 11:31:23 INFO SparkEnv: Registering MapOutputTracker
+26/10/14 11:31:23 INFO SparkEnv: Registering BlockManagerMaster
+26/10/14 11:31:23 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/10/14 11:31:23 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/10/14 11:31:23 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/10/14 11:31:23 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-4acf0241-24a2-4588-876d-093eac4c39e0
+26/10/14 11:31:23 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+26/10/14 11:31:23 INFO SparkEnv: Registering OutputCommitCoordinator
+26/10/14 11:31:23 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/10/14 11:31:23 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/10/14 11:31:23 INFO Executor: Starting executor ID driver on host 10.255.255.254
+26/10/14 11:31:23 INFO Executor: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+26/10/14 11:31:23 INFO Executor: Java version 17.0.20.1
+26/10/14 11:31:23 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/10/14 11:31:23 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@5223a3de for default.
+26/10/14 11:31:23 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 43935.
+26/10/14 11:31:23 INFO NettyBlockTransferService: Server created on 10.255.255.254:43935
+26/10/14 11:31:23 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/10/14 11:31:23 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 43935, None)
+26/10/14 11:31:23 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:43935 with 434.4 MiB RAM, BlockManagerId(driver, 10.255.255.254, 43935, None)
+26/10/14 11:31:23 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 43935, None)
+26/10/14 11:31:23 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 43935, None)
+
+===== FEATURE COMPARISON BY PURCHASE LABEL =====
+26/10/14 11:31:32 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:31:32 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:31:32 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:31:32 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:31:32 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:31:32 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:31:32 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:31:32 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:31:32 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:31:32 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:31:32 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:31:32 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:31:36 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:31:36 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:31:36 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:31:36 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:31:36 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:31:36 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:31:36 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:31:36 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:31:36 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:31:36 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:31:36 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:31:36 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:31:36 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:31:36 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:31:36 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:31:36 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
++-----+--------+------------------+--------------------+------------------+------------------+------------------+-------------------+------------------+------------------------+
+|label|visitors|avg_views         |avg_carts           |avg_total_events  |avg_unique_items  |avg_unique_viewed |avg_unique_carted  |avg_days_active   |avg_hours_since_activity|
++-----+--------+------------------+--------------------+------------------+------------------+------------------+-------------------+------------------+------------------------+
+|1.0  |583     |31.409948542024015|2.95368782161235    |36.111492281303605|21.32418524871355 |20.938250428816467|2.5488850771869638 |10.122475632266058|444.26050179721744      |
+|0.0  |606180  |1.8865930911610413|0.045765284239004916|1.9466033191461283|1.5067983107327856|1.499112474842456 |0.04140519317694414|1.01738192917061  |696.6069573443446       |
++-----+--------+------------------+--------------------+------------------+------------------+------------------+-------------------+------------------+------------------------+
+
+
+===== CART ACTIVITY =====
++-----+-------------------+
+|label| fraction_with_cart|
++-----+-------------------+
+|  1.0| 0.2967409948542024|
+|  0.0|0.02667194562671154|
++-----+-------------------+
+

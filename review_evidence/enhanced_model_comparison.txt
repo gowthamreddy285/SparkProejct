@@ -1,0 +1,2 @@
+Logistic Regression | accuracy=0.9919 | precision=0.5051 | recall=0.0432 | F1=0.0796 | TN=278722 FP=97 FN=2192 TP=99
+Random Forest | accuracy=0.9967 | precision=0.9240 | recall=0.6478 | F1=0.7616 | TN=278697 FP=122 FN=807 TP=1484

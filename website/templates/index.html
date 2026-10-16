@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RetailIQ | Customer Intelligence Platform</title>
+<style>
+:root{--bg:#f5f7fb;--panel:#fff;--ink:#19243a;--muted:#718096;--line:#e5eaf2;--blue:#5268ed;--cyan:#13a9b7;--green:#159b72;--amber:#c98722;--red:#d94e62;--shadow:0 8px 28px #25375b08}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:14px}button,input,select{font:inherit}button{cursor:pointer}
+.layout{display:grid;grid-template-columns:245px minmax(0,1fr);min-height:100vh}
+aside{background:#111b31;color:#e8edfa;padding:25px 16px;display:flex;flex-direction:column;gap:30px}
+.brand{display:flex;gap:12px;align-items:center;padding:0 8px}.logo{width:40px;height:40px;border-radius:13px;background:linear-gradient(135deg,#7084ff,#16b9c2);display:grid;place-items:center;font-weight:900;font-size:22px;color:#fff}.brand h1{font-size:20px;margin:0}.brand p{font-size:11px;color:#9daac3;margin:4px 0 0}
+.navlabel{font-size:10px;letter-spacing:1.5px;color:#8190ad;font-weight:800;padding:0 12px;margin-bottom:9px}.nav{display:grid;gap:6px}.nav button{border:0;background:transparent;color:#aeb9d0;text-align:left;padding:13px 12px;border-radius:10px;font-size:12px}.nav button:hover,.nav button.active{background:#253454;color:white}.nav button.active{box-shadow:inset 3px 0 #7b8cff}.nav .ico{display:inline-block;width:27px;font-size:16px}
+.sidefoot{margin-top:auto;border:1px solid #2c3955;background:#192640;padding:14px;border-radius:12px;color:#aeb9d0;font-size:11px;line-height:1.6}.sidefoot strong{color:#fff}
+main{min-width:0;padding:28px clamp(16px,3vw,42px) 40px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:25px}.eyebrow{font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--blue);font-weight:800;margin-bottom:8px}h2{font-size:29px;letter-spacing:-.8px;margin:0}.subtitle{color:var(--muted);font-size:12px;line-height:1.7;margin:8px 0 0}.status{padding:9px 12px;border:1px solid var(--line);border-radius:99px;background:var(--panel);color:var(--muted);font-size:11px;white-space:nowrap}.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);margin-right:7px}
+.view{display:none}.view.active{display:block;animation:fade .18s}@keyframes fade{from{opacity:.5;transform:translateY(3px)}to{opacity:1;transform:none}}
+.grid{display:grid;gap:15px}.kpis{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:16px}.two{grid-template-columns:repeat(2,minmax(0,1fr))}.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{min-width:0;background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:19px;box-shadow:var(--shadow)}.klabel{font-size:11px;color:var(--muted);display:flex;justify-content:space-between;gap:8px}.kicon{color:var(--blue);font-size:18px}.kvalue{font-size:29px;font-weight:800;letter-spacing:-1px;margin:13px 0 5px}.kfoot{font-size:10px;color:var(--muted)}.head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:17px}.head h3{font-size:14px;margin:0}.head p{font-size:11px;color:var(--muted);margin:6px 0 0;line-height:1.5}.tag{font-size:10px;font-weight:750;padding:5px 8px;border-radius:7px;background:#edf0ff;color:#4c60dc;white-space:nowrap}
+.sectionhead{display:flex;align-items:flex-end;justify-content:space-between;gap:15px;margin-bottom:20px}.sectionhead h2{font-size:23px}.controls{display:flex;gap:8px;flex-wrap:wrap}
+input,select{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:8px;padding:10px;font-size:12px;max-width:100%;width:100%}.btn{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:9px;padding:10px 13px;font-size:11px;font-weight:750}.btn.primary{background:var(--blue);border-color:var(--blue);color:#fff}.btn:disabled{opacity:.5;cursor:wait}
+.formgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.field label{display:block;color:var(--muted);font-size:11px;margin-bottom:6px}.field{min-width:0}
+.moduleicon{width:43px;height:43px;border-radius:12px;background:#edf0ff;display:grid;place-items:center;color:var(--blue);font-size:21px;margin-bottom:14px}.module h3{font-size:15px;margin:0}.desc{font-size:12px;line-height:1.65;color:var(--muted);margin:8px 0 16px}
+.result{border:1px solid var(--line);background:#f8faff;border-radius:11px;padding:13px;margin-top:12px}.rlabel{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;font-weight:750}.rvalue{font-size:19px;font-weight:800;margin:7px 0}.rsub{font-size:11px;color:var(--muted);line-height:1.6}
+.barlist{display:grid;gap:16px}.barrow{display:grid;gap:7px}.barlabel{display:flex;justify-content:space-between;gap:10px;font-size:11px}.barlabel span:last-child{color:var(--muted);font-variant-numeric:tabular-nums}.track{height:8px;border-radius:20px;background:#edf0f6;overflow:hidden}.fill{height:100%;border-radius:20px;background:linear-gradient(90deg,#5268ed,#8795ff)}.fill.cyan{background:linear-gradient(90deg,#13a9b7,#65d6d5)}.fill.green{background:linear-gradient(90deg,#159b72,#65d3a9)}.fill.amber{background:linear-gradient(90deg,#c98722,#f2c86c)}
+.badge{display:inline-block;padding:5px 8px;border-radius:7px;font-size:10px;font-weight:750}.green{background:#e1f7ee;color:#087c56}.amber{background:#fff1d9;color:#98600b}.red{background:#ffe8ec;color:#b6334b}.blue{background:#edf0ff;color:#4c60dc}
+.tablewrap{overflow:auto}table{border-collapse:collapse;width:100%;font-size:11px;min-width:520px}th{text-align:left;color:var(--muted);font-size:9px;letter-spacing:.7px;text-transform:uppercase;padding:12px 9px;border-bottom:1px solid var(--line)}td{padding:12px 9px;border-bottom:1px solid var(--line)}tr:last-child td{border-bottom:0}
+.notice{margin-top:15px;border:1px solid #f0dfb8;background:#fff9eb;color:#795b23;padding:13px;border-radius:10px;font-size:11px;line-height:1.65}.muted{color:var(--muted)}.hidden{display:none!important}.score{width:84px;height:84px;border-radius:50%;background:conic-gradient(var(--blue) 0deg,#e9edf6 0deg);display:grid;place-items:center;position:relative;flex-shrink:0}.score:before{content:"";position:absolute;background:#fff;width:66px;height:66px;border-radius:50%}.score span{z-index:1;font-size:21px;font-weight:800}.scorelayout{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.productrow{display:flex;align-items:center;gap:11px;padding:12px 0;border-bottom:1px solid var(--line)}.productrow:last-child{border:0}.producticon{width:37px;height:37px;border-radius:10px;background:#edf0ff;display:grid;place-items:center}.productrow strong{font-size:12px}.productrow small{display:block;font-size:10px;color:var(--muted);margin-top:4px}.relevance{margin-left:auto;font-weight:800;color:var(--green);font-size:12px}.footer{border-top:1px solid var(--line);padding-top:16px;margin-top:25px;color:var(--muted);font-size:10px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+@media(max-width:1050px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.three{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){.layout{grid-template-columns:1fr}aside{padding:13px;gap:14px}.navlabel,.sidefoot{display:none}.nav{display:flex;overflow:auto}.nav button{white-space:nowrap;padding:10px}.topbar{align-items:flex-start;flex-direction:column}main{padding:20px 13px}.two,.three,.kpis{grid-template-columns:1fr}.sectionhead{align-items:flex-start;flex-direction:column}.formgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside>
+  <div class="brand"><div class="logo">R</div><div><h1>RetailIQ</h1><p>Customer intelligence</p></div></div>
+  <div><div class="navlabel">Workspace</div><nav class="nav">
+    <button class="active" data-view="overview"><span class="ico">▦</span>Overview</button>
+    <button data-view="journey"><span class="ico">⌁</span>Shopper Journey</button>
+    <button data-view="cart"><span class="ico">🛒</span>Cart Rescue</button>
+    <button data-view="products"><span class="ico">✧</span>Product Engine</button>
+    <button data-view="engagement"><span class="ico">◉</span>Engagement Score</button>
+    <button data-view="models"><span class="ico">⌘</span>Model Metrics</button>
+    <button data-view="dataset"><span class="ico">▤</span>Dataset Explorer</button>
+  </nav></div>
+  <div class="sidefoot"><strong>Retailrocket dataset</strong><br><span id="side-status">Connecting to Flask API…</span><br><span class="muted">Event-level interaction data</span></div>
+</aside>
+<main>
+<header class="topbar"><div><div class="eyebrow">Retail intelligence platform</div><h2 id="page-title">Overview</h2><p class="subtitle" id="page-subtitle">Explore customer activity, engagement signals and model performance.</p></div><div class="status"><span class="dot" id="status-dot"></span><span id="status-text">Connecting to backend</span></div></header>
+
+<section class="view active" id="view-overview">
+  <div class="grid kpis">
+    <div class="card"><div class="klabel">Total event records <span class="kicon">⌁</span></div><div class="kvalue" id="k-events">—</div><div class="kfoot">Rows excluding the header</div></div>
+    <div class="card"><div class="klabel">Unique visitors <span class="kicon">♙</span></div><div class="kvalue" id="k-visitors">—</div><div class="kfoot">Distinct visitor identifiers</div></div>
+    <div class="card"><div class="klabel">Product views <span class="kicon">◉</span></div><div class="kvalue" id="k-views">—</div><div class="kfoot" id="view-share">Recorded view events</div></div>
+    <div class="card"><div class="klabel">Transactions <span class="kicon">✓</span></div><div class="kvalue" id="k-transactions">—</div><div class="kfoot" id="transaction-share">Recorded transaction events</div></div>
+  </div>
+  <div class="grid two">
+    <div class="card"><div class="head"><div><h3>Event distribution</h3><p>Actual event counts from the dataset API</p></div><span class="tag">Live data</span></div><div class="barlist" id="event-bars"><p class="muted">Loading event counts…</p></div></div>
+    <div class="card"><div class="head"><div><h3>Model performance snapshot</h3><p>Results from your saved model comparison</p></div><span class="tag">Flask API</span></div><div class="barlist" id="overview-models"><p class="muted">Loading model metrics…</p></div></div>
+  </div>
+  <div class="grid two" style="margin-top:15px">
+    <div class="card"><div class="head"><div><h3>RetailIQ modules</h3><p>Use the navigation to explore each intelligence feature.</p></div></div>
+      <div class="productrow"><div class="producticon">⌁</div><div><strong>Shopper Journey Decoder</strong><small>Classify journey stage and suggest an action</small></div></div>
+      <div class="productrow"><div class="producticon">🛒</div><div><strong>Cart Rescue Intelligence</strong><small>Review cart activity and possible abandonment</small></div></div>
+      <div class="productrow"><div class="producticon">✧</div><div><strong>Next-Best-Product Engine</strong><small>Rank products with relevance scores</small></div></div>
+      <div class="productrow"><div class="producticon">◉</div><div><strong>Visitor Engagement Score</strong><small>Calculate a transparent 0–100 behavior score</small></div></div>
+    </div>
+    <div class="card"><div class="head"><div><h3>Dataset at a glance</h3><p>Schema and source information</p></div></div><div class="result"><div class="rlabel">Dataset file</div><div class="rvalue" style="font-size:16px">data/events.csv</div><div class="rsub" id="dataset-file">Loading file information…</div></div><div class="result"><div class="rlabel">Columns</div><div class="rsub" style="margin-top:8px">timestamp · visitorid · event · itemid · transactionid</div></div><div class="notice">Event percentages describe event records, not unique-user conversion rates. One visitor can generate multiple events.</div></div>
+  </div>
+</section>
+
+<section class="view" id="view-journey">
+  <div class="sectionhead"><div><h2>Shopper Journey Decoder</h2><p class="subtitle">Enter observed visitor activity to identify a likely journey stage and next best action.</p></div><span class="tag">Rule-based baseline</span></div>
+  <div class="grid two">
+    <div class="card"><div class="head"><div><h3>Visitor activity</h3><p>Use a visitor profile aggregated from events.csv.</p></div></div><form id="journey-form"><div class="formgrid">
+      <div class="field"><label for="j-events">Total events</label><input id="j-events" type="number" min="0" value="12" required></div>
+      <div class="field"><label for="j-views">Product views</label><input id="j-views" type="number" min="0" value="10" required></div>
+      <div class="field"><label for="j-carts">Cart events</label><input id="j-carts" type="number" min="0" value="1" required></div>
+      <div class="field"><label for="j-items">Unique items viewed</label><input id="j-items" type="number" min="0" value="6" required></div>
+      <div class="field"><label for="j-hours">Hours since last event</label><input id="j-hours" type="number" min="0" value="2" required></div>
+    </div><button class="btn primary" style="margin-top:15px" type="submit">Decode journey →</button></form></div>
+    <div class="card"><div class="head"><div><h3>Journey analysis</h3><p>Suggested action based on entered activity</p></div></div><div class="result"><div class="rlabel">Journey stage</div><div class="rvalue" id="journey-stage">Evaluating</div><div class="rsub" id="journey-desc">Submit the profile to analyze the visitor.</div></div><div class="result"><div class="rlabel">Next best action</div><div class="rvalue" style="font-size:15px" id="journey-action">Awaiting activity</div><div class="rsub" id="journey-reason"></div></div></div>
+  </div>
+  <div class="notice">The journey classification is an explainable rule-based heuristic, not a trained journey-stage model. The CSV has no explicit session-end field.</div>
+</section>
+
+<section class="view" id="view-cart">
+  <div class="sectionhead"><div><h2>Cart Rescue Intelligence</h2><p class="subtitle">Assess cart activity against subsequent transactions within a chosen time window.</p></div></div>
+  <div class="grid two">
+    <div class="card"><div class="head"><div><h3>Cart activity profile</h3><p>Enter visitor activity and observation window.</p></div></div><form id="cart-form"><div class="formgrid">
+      <div class="field"><label for="c-carts">Cart events</label><input id="c-carts" type="number" min="0" value="2" required></div>
+      <div class="field"><label for="c-transactions">Subsequent transactions</label><input id="c-transactions" type="number" min="0" value="0" required></div>
+      <div class="field"><label for="c-hours">Hours since cart activity</label><input id="c-hours" type="number" min="0" value="30" required></div>
+      <div class="field"><label for="c-window">Observation window</label><select id="c-window"><option value="24">24 hours</option><option value="48" selected>48 hours</option><option value="72">72 hours</option></select></div>
+    </div><button class="btn primary" style="margin-top:15px" type="submit">Assess cart risk →</button></form></div>
+    <div class="card"><div class="head"><div><h3>Rescue assessment</h3><p>Rule-based result; no messages are sent.</p></div></div><div class="result"><div class="rlabel">Cart status</div><div class="rvalue" id="cart-status">Awaiting assessment</div><div class="rsub" id="cart-reason">Enter a cart profile to assess it.</div></div><div class="result"><div class="rlabel">Recommended action</div><div class="rvalue" style="font-size:15px" id="cart-action">—</div><div class="rsub" id="cart-caveat"></div></div></div>
+  </div>
+  <div class="notice">A true abandonment result requires matching each visitor's cart event with later transactions and timestamps. This form assesses the supplied profile; it does not claim to scan all visitors.</div>
+</section>
+
+<section class="view" id="view-products">
+  <div class="sectionhead"><div><h2>Next-Best-Product Engine</h2><p class="subtitle">Rank products by observed popularity, with relevance scores derived from actual dataset counts.</p></div><button class="btn primary" id="load-products">Load top products ↻</button></div>
+  <div class="grid two">
+    <div class="card"><div class="head"><div><h3>Top interacted products</h3><p>Computed from item IDs in the Retailrocket dataset when available.</p></div><span class="tag">Popularity baseline</span></div><div id="product-list"><p class="muted">Press “Load top products” to request results.</p></div></div>
+    <div class="card"><div class="head"><div><h3>How relevance works</h3></div></div><div class="result"><div class="rlabel">Baseline score</div><div class="rvalue">0–100</div><div class="rsub">A normalized popularity score relative to the most-interacted item in the returned results. It is not a probability of purchase.</div></div><div class="result"><div class="rlabel">Known limitation</div><div class="rsub">The dataset contains item IDs but no product names, descriptions, prices, or categories. The popularity baseline is not a personalized recommender.</div></div></div>
+  </div>
+</section>
+
+<section class="view" id="view-engagement">
+  <div class="sectionhead"><div><h2>Visitor Engagement Score</h2><p class="subtitle">Calculate a transparent 0–100 score from the supplied visitor activity.</p></div></div>
+  <div class="grid two">
+    <div class="card"><div class="head"><div><h3>Engagement inputs</h3><p>Enter features aggregated for one visitor.</p></div></div><form id="engagement-form"><div class="formgrid">
+      <div class="field"><label for="e-events">Total events</label><input id="e-events" type="number" min="0" value="12" required></div>
+      <div class="field"><label for="e-views">Views</label><input id="e-views" type="number" min="0" value="10" required></div>
+      <div class="field"><label for="e-carts">Cart events</label><input id="e-carts" type="number" min="0" value="1" required></div>
+      <div class="field"><label for="e-items">Unique items</label><input id="e-items" type="number" min="0" value="6" required></div>
+      <div class="field"><label for="e-hours">Hours since activity</label><input id="e-hours" type="number" min="0" value="2" required></div>
+    </div><button class="btn primary" style="margin-top:15px" type="submit">Calculate engagement →</button></form></div>
+    <div class="card"><div class="head"><div><h3>Engagement result</h3><p>Transparent heuristic, not a learned model.</p></div></div><div class="scorelayout"><div class="score" id="engagement-ring"><span id="engagement-score">—</span></div><div><span class="badge blue" id="engagement-segment">Awaiting inputs</span><p class="rsub" id="engagement-summary" style="max-width:260px;margin-top:8px">Calculate a score to view the segment.</p></div></div><div class="result"><div class="rlabel">Score explanation</div><div class="rsub" id="engagement-factors">The score will be broken down by activity, cart signals, item variety, and recency.</div></div></div>
+  </div>
+  <div class="notice">The score is an interpretable prototype heuristic. It should be validated against business outcomes before use for automated targeting.</div>
+</section>
+
+<section class="view" id="view-models">
+  <div class="sectionhead"><div><h2>Model Metrics</h2><p class="subtitle">Live metrics from the existing Flask API, including the enhanced model comparison.</p></div><button class="btn" id="refresh-metrics">Refresh metrics ↻</button></div>
+  <div class="grid kpis">
+    <div class="card"><div class="klabel">Best accuracy</div><div class="kvalue" id="best-accuracy">—</div><div class="kfoot">Among returned models</div></div>
+    <div class="card"><div class="klabel">Best precision</div><div class="kvalue" id="best-precision">—</div><div class="kfoot">Among returned models</div></div>
+    <div class="card"><div class="klabel">Best recall</div><div class="kvalue" id="best-recall">—</div><div class="kfoot">Among returned models</div></div>
+    <div class="card"><div class="klabel">Best F1-score</div><div class="kvalue" id="best-f1">—</div><div class="kfoot">Among returned models</div></div>
+  </div>
+  <div class="card"><div class="head"><div><h3>Full model comparison</h3><p>Values below are populated from /api/metrics.</p></div></div><div class="tablewrap"><table><thead><tr><th>Model</th><th>Accuracy</th><th>Precision</th><th>Recall</th><th>F1</th><th>PR-AUC</th><th>Threshold</th><th>TN</th><th>FP</th><th>FN</th><th>TP</th></tr></thead><tbody id="model-table"><tr><td colspan="11">Loading metrics…</td></tr></tbody></table></div><div class="notice">Accuracy can be misleading for imbalanced purchase labels. Precision, recall, F1-score, PR-AUC, and the confusion matrix should be considered together. Existing retrospective results are not proof of future-purchase prediction performance.</div></div>
+</section>
+
+<section class="view" id="view-dataset">
+  <div class="sectionhead"><div><h2>Dataset Explorer</h2><p class="subtitle">Dataset profile and actual event counts calculated by the backend.</p></div><button class="btn" id="refresh-dataset">Refresh dataset ↻</button></div>
+  <div class="grid kpis">
+    <div class="card"><div class="klabel">Event records</div><div class="kvalue" id="d-events">—</div><div class="kfoot">CSV data rows, header excluded</div></div>
+    <div class="card"><div class="klabel">Unique visitors</div><div class="kvalue" id="d-visitors">—</div><div class="kfoot">Distinct visitor IDs</div></div>
+    <div class="card"><div class="klabel">File size</div><div class="kvalue" id="d-size">—</div><div class="kfoot">MB on disk</div></div>
+    <div class="card"><div class="klabel">Schema columns</div><div class="kvalue" id="d-columns">5</div><div class="kfoot">Event-level dataset</div></div>
+  </div>
+  <div class="grid two">
+    <div class="card"><div class="head"><div><h3>Dataset schema</h3><p>Meaning of each CSV column</p></div></div><div class="tablewrap"><table style="min-width:0"><thead><tr><th>Column</th><th>Description</th><th>Application</th></tr></thead><tbody><tr><td>timestamp</td><td>Event timestamp in milliseconds</td><td>Time ordering and recency</td></tr><tr><td>visitorid</td><td>Visitor identifier</td><td>Group behavior by visitor</td></tr><tr><td>event</td><td>view, addtocart, transaction</td><td>Journey and conversion signals</td></tr><tr><td>itemid</td><td>Item identifier</td><td>Popularity and recommendations</td></tr><tr><td>transactionid</td><td>Transaction ID when present</td><td>Transaction linkage</td></tr></tbody></table></div><div class="result"><div class="rlabel">Dataset file</div><div class="rvalue" style="font-size:15px" id="d-file">data/events.csv</div><div class="rsub">Retailrocket event interaction data.</div></div></div>
+    <div class="card"><div class="head"><div><h3>Event counts and shares</h3><p>Actual counts from the dataset API</p></div></div><div class="barlist" id="dataset-event-bars"><p class="muted">Loading event statistics…</p></div><div class="result"><div class="rlabel">Interpretation</div><div class="rsub">Event shares are not unique-visitor conversion rates. The dataset does not include product prices, revenue, customer demographics, or product descriptions.</div></div></div>
+  </div>
+  <div class="card" style="margin-top:15px"><div class="head"><div><h3>Dataset field availability</h3></div></div><div id="column-chips" class="controls"><span class="tag">timestamp</span><span class="tag">visitorid</span><span class="tag">event</span><span class="tag">itemid</span><span class="tag">transactionid</span></div></div>
+</section>
+<footer class="footer"><span>RetailIQ · Big Data Analytics project</span><span>Retailrocket · event-level interaction data</span></footer>
+</main>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const fmt=n=>Number(n||0).toLocaleString('en-IN');
+const pct=n=>Number.isFinite(Number(n))?(Number(n)*100).toFixed(2)+'%':'—';
+const safeNum=id=>Math.max(0,Number($(id).value)||0);
+const eventColors={view:'',addtocart:'cyan',transaction:'green'};
+const pageTitles={overview:['Overview','Explore customer activity, engagement signals and model performance.'],journey:['Shopper Journey Decoder','Identify visitor stages and suggest a next best action.'],cart:['Cart Rescue Intelligence','Assess cart activity and possible abandonment.'],products:['Next-Best-Product Engine','Rank products by observed item popularity.'],engagement:['Visitor Engagement Score','Calculate a transparent behavior-based engagement segment.'],models:['Model Metrics','Review all available model evaluation metrics.'],dataset:['Dataset Explorer','Inspect the actual dataset and event distribution.']};
+document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.view').forEach(x=>x.classList.toggle('active',x.id==='view-'+b.dataset.view));$('page-title').textContent=pageTitles[b.dataset.view][0];$('page-subtitle').textContent=pageTitles[b.dataset.view][1];window.scrollTo({top:0,behavior:'smooth'});}));
+function renderEventBars(target,counts,total){const entries=Object.entries(counts||{}).sort((a,b)=>b[1]-a[1]);$(target).innerHTML=entries.map(([name,value])=>`<div class="barrow"><div class="barlabel"><span>${name}</span><span>${fmt(value)} · ${total?(value/total*100).toFixed(2):0}%</span></div><div class="track"><div class="fill ${eventColors[name]||''}" style="width:${total?Math.max(.5,value/total*100):0}%"></div></div></div>`).join('')||'<p class="muted">No event counts returned.</p>';}
+async function loadDataset(){try{const r=await fetch('/api/dataset');const d=await r.json();if(!r.ok)throw Error(d.error||'Dataset API failed');$('k-events').textContent=fmt(d.total_events);$('k-visitors').textContent=fmt(d.unique_visitors);$('k-views').textContent=fmt(d.event_counts?.view||0);$('k-transactions').textContent=fmt(d.event_counts?.transaction||0);$('view-share').textContent=(100*(d.event_counts?.view||0)/(d.total_events||1)).toFixed(2)+'% of recorded events';$('transaction-share').textContent=(100*(d.event_counts?.transaction||0)/(d.total_events||1)).toFixed(2)+'% of recorded events';$('d-events').textContent=fmt(d.total_events);$('d-visitors').textContent=fmt(d.unique_visitors);$('d-size').textContent=(Number(d.file_size_mb)||0).toFixed(2);$('d-columns').textContent=(d.columns||[]).length;$('d-file').textContent=d.file||'data/events.csv';$('dataset-file').textContent=`${Number(d.file_size_mb||0).toFixed(2)} MB · ${(d.columns||[]).length} columns · actual backend statistics`;$('side-status').textContent=`${fmt(d.total_events)} events · ${fmt(d.unique_visitors)} visitors`;renderEventBars('event-bars',d.event_counts,d.total_events);renderEventBars('dataset-event-bars',d.event_counts,d.total_events);$('status-text').textContent='Backend connected';$('status-dot').style.background='var(--green)';}catch(e){$('status-text').textContent='Dataset API unavailable';$('status-dot').style.background='var(--red)';$('side-status').textContent='Could not load dataset';$('event-bars').innerHTML=`<p class="muted">${e.message}. Restart Flask or check /api/dataset.</p>`;$('dataset-event-bars').innerHTML=`<p class="muted">${e.message}</p>`;}}
+async function loadMetrics(){try{const r=await fetch('/api/metrics');const d=await r.json();if(!r.ok)throw Error(d.error||'Metrics API failed');const ms=d.models||[];if(!ms.length)throw Error('No model metrics returned');const best=k=>ms.reduce((a,b)=>Number(b[k]??-1)>Number(a[k]??-1)?b:a,ms[0]);$('best-accuracy').textContent=pct(best('accuracy').accuracy);$('best-precision').textContent=pct(best('precision').precision);$('best-recall').textContent=pct(best('recall').recall);$('best-f1').textContent=Number(best('f1').f1||0).toFixed(4);$('model-table').innerHTML=ms.map(m=>`<tr><td><strong>${m.name}</strong></td><td>${pct(m.accuracy)}</td><td>${pct(m.precision)}</td><td>${pct(m.recall)}</td><td>${Number(m.f1||0).toFixed(4)}</td><td>${m.pr_auc==null?'—':Number(m.pr_auc).toFixed(4)}</td><td>${m.threshold==null?'—':Number(m.threshold).toFixed(2)}</td><td>${m.tn==null?'—':fmt(m.tn)}</td><td>${m.fp==null?'—':fmt(m.fp)}</td><td>${m.fn==null?'—':fmt(m.fn)}</td><td>${m.tp==null?'—':fmt(m.tp)}</td></tr>`).join('');$('overview-models').innerHTML=ms.map(m=>`<div class="barrow"><div class="barlabel"><span>${m.name} · F1</span><span>${Number(m.f1||0).toFixed(4)}</span></div><div class="track"><div class="fill" style="width:${Math.max(0,Math.min(100,Number(m.f1||0)*100))}%"></div></div><div class="barlabel"><span class="muted">Accuracy ${pct(m.accuracy)}</span><span>PR-AUC ${m.pr_auc==null?'—':Number(m.pr_auc).toFixed(4)}</span></div></div>`).join('');}catch(e){$('model-table').innerHTML=`<tr><td colspan="11">${e.message}</td></tr>`;$('overview-models').innerHTML=`<p class="muted">${e.message}</p>`;}}
+function profile(prefix){return {events:safeNum(prefix+'-events'),views:safeNum(prefix+'-views'),carts:safeNum(prefix+'-carts'),items:safeNum(prefix+'-items'),hours:safeNum(prefix+'-hours')};}
+function journey(p){if(p.events===0)return ['No recorded activity','No activity','Confirm the visitor ID and event history.','There are no recorded events in this profile.'];if(p.hours>=168)return ['Re-engagement candidate','Inactive for 7 days or more in the supplied profile','Consider a relevant return-visit message.','This label depends on the supplied hours since activity.'];if(p.carts>0)return ['Purchase intent','Cart activity suggests stronger intent','Make cart review, delivery and checkout details easy to find.','Cart events are present in the profile.'];if(p.views>=5||p.items>=4)return ['Consideration','Repeated views or item variety suggest comparison behavior','Show relevant comparisons and related products.','The visitor has explored multiple items or generated repeated views.'];return ['Discovery','Early browsing or limited activity','Surface relevant categories and popular products.','Few events or viewed items were supplied.'];}
+$('journey-form').addEventListener('submit',e=>{e.preventDefault();const p=profile('j');if(p.views>p.events||p.carts>p.events||p.items>p.events){$('journey-stage').textContent='Check inputs';$('journey-desc').textContent='Views, cart events, and unique items should not exceed total events.';return;}const j=journey(p);$('journey-stage').textContent=j[0];$('journey-action').textContent=j[2];$('journey-desc').textContent=j[1];$('journey-reason').textContent=j[3];});
+$('cart-form').addEventListener('submit',e=>{e.preventDefault();const carts=safeNum('c-carts'),tx=safeNum('c-transactions'),hours=safeNum('c-hours'),win=safeNum('c-window');let status,reason,action,cls;if(!carts){status='No cart signal';reason='No cart event was supplied.';action='Continue relevant discovery';cls='blue';}else if(tx>0){status='Transaction recorded';reason='The profile reports a subsequent transaction.';action='Avoid an unnecessary rescue reminder';cls='green';}else if(hours<=win){status='Potential abandonment';reason=`Cart activity is ${hours} hours old and no subsequent transaction was supplied within the ${win}-hour observation window.`;action='Consider a cart reminder or checkout assistance';cls='red';}else{status='Outside observation window';reason=`Cart activity is ${hours} hours old, beyond the selected ${win}-hour window; the outcome needs transaction history validation.`;action='Review later transactions before contacting';cls='amber';}$('cart-status').innerHTML=`<span class="badge ${cls}">${status}</span>`;$('cart-reason').textContent=reason;$('cart-action').textContent=action;$('cart-caveat').textContent='Assessment uses the values entered above; it is not a scan of all visitors.';});
+$('engagement-form').addEventListener('submit',e=>{e.preventDefault();const p=profile('e');if(p.views>p.events||p.carts>p.events||p.items>p.events){$('engagement-segment').textContent='Check inputs';$('engagement-summary').textContent='Views, carts and unique items must not exceed total events.';return;}const activity=Math.min(35,Math.log1p(p.events)/Math.log(101)*35),variety=Math.min(20,p.items/10*20),cart=Math.min(25,p.carts*12.5),recency=25*Math.exp(-p.hours/48),viewSignal=Math.min(15,p.views/20*15);const score=Math.round(Math.min(100,activity+variety+cart+recency+viewSignal));const seg=score>=70?'Highly engaged':score>=40?'Moderately engaged':'Low engagement';$('engagement-score').textContent=score;$('engagement-ring').style.background=`conic-gradient(var(--blue) ${score*3.6}deg,#e9edf6 ${score*3.6}deg)`;$('engagement-segment').textContent=seg;$('engagement-segment').className='badge '+(score>=70?'green':score>=40?'amber':'blue');$('engagement-summary').textContent=score>=70?'Frequent activity and recent engagement signals.':score>=40?'Some interest is visible; encourage relevant exploration.':'Limited or stale activity; consider a gentle discovery prompt.';$('engagement-factors').textContent=`Activity ${activity.toFixed(1)}/35 · item variety ${variety.toFixed(1)}/20 · cart signals ${cart.toFixed(1)}/25 · recency ${recency.toFixed(1)}/25 · views ${viewSignal.toFixed(1)}/15. Score is a heuristic.`;});
+async function loadProducts(){const box=$('product-list');box.innerHTML='<p class="muted">Loading product counts from Flask…</p>';try{const r=await fetch('/api/products');const d=await r.json();if(!r.ok)throw Error(d.error||'Product API unavailable');const items=d.products||[];if(!items.length)throw Error('No products were returned');box.innerHTML=items.slice(0,3).map((p,i)=>`<div class="productrow"><div class="producticon">📦</div><div><strong>Item #${p.itemid}</strong><small>${fmt(p.interactions)} recorded interactions</small></div><div class="relevance">${Number(p.relevance_score).toFixed(1)}%</div></div>`).join('');}catch(e){box.innerHTML=`<p class="muted">${e.message}. The product endpoint has not been added to Flask yet.</p>`;}}
+$('load-products').addEventListener('click',loadProducts);
+$('refresh-metrics').addEventListener('click',loadMetrics);$('refresh-dataset').addEventListener('click',loadDataset);
+loadDataset();loadMetrics();
+</script>
+</body>
+</html>

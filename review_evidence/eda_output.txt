@@ -1,0 +1,109 @@
+26/10/14 11:17:33 WARN Utils: Your hostname, satwiq resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+26/10/14 11:17:33 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/10/14 11:17:34 INFO SparkContext: Running Spark version 3.5.8
+26/10/14 11:17:34 INFO SparkContext: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+26/10/14 11:17:34 INFO SparkContext: Java version 17.0.20.1
+26/10/14 11:17:34 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/10/14 11:17:34 INFO ResourceUtils: ==============================================================
+26/10/14 11:17:34 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/10/14 11:17:34 INFO ResourceUtils: ==============================================================
+26/10/14 11:17:34 INFO SparkContext: Submitted application: RetailrocketEDA
+26/10/14 11:17:34 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/10/14 11:17:34 INFO ResourceProfile: Limiting resource is cpu
+26/10/14 11:17:34 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/10/14 11:17:34 INFO SecurityManager: Changing view acls to: satwiqreddy
+26/10/14 11:17:34 INFO SecurityManager: Changing modify acls to: satwiqreddy
+26/10/14 11:17:34 INFO SecurityManager: Changing view acls groups to: 
+26/10/14 11:17:34 INFO SecurityManager: Changing modify acls groups to: 
+26/10/14 11:17:34 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: satwiqreddy; groups with view permissions: EMPTY; users with modify permissions: satwiqreddy; groups with modify permissions: EMPTY
+26/10/14 11:17:34 INFO Utils: Successfully started service 'sparkDriver' on port 44735.
+26/10/14 11:17:34 INFO SparkEnv: Registering MapOutputTracker
+26/10/14 11:17:34 INFO SparkEnv: Registering BlockManagerMaster
+26/10/14 11:17:34 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/10/14 11:17:34 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/10/14 11:17:34 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/10/14 11:17:34 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-b68310e1-77a1-4269-a49d-918b1a294c2b
+26/10/14 11:17:34 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+26/10/14 11:17:34 INFO SparkEnv: Registering OutputCommitCoordinator
+26/10/14 11:17:35 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/10/14 11:17:35 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/10/14 11:17:35 INFO Executor: Starting executor ID driver on host 10.255.255.254
+26/10/14 11:17:35 INFO Executor: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+26/10/14 11:17:35 INFO Executor: Java version 17.0.20.1
+26/10/14 11:17:35 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/10/14 11:17:35 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@7b344880 for default.
+26/10/14 11:17:35 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 44305.
+26/10/14 11:17:35 INFO NettyBlockTransferService: Server created on 10.255.255.254:44305
+26/10/14 11:17:35 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/10/14 11:17:35 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 44305, None)
+26/10/14 11:17:35 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:44305 with 434.4 MiB RAM, BlockManagerId(driver, 10.255.255.254, 44305, None)
+26/10/14 11:17:35 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 44305, None)
+26/10/14 11:17:35 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 44305, None)
+
+===== DATASET OVERVIEW =====
+Total rows: 2756101
+Total columns: 5
+Columns: ['timestamp', 'visitorid', 'event', 'itemid', 'transactionid']
+
+===== SCHEMA =====
+root
+ |-- timestamp: long (nullable = true)
+ |-- visitorid: integer (nullable = true)
+ |-- event: string (nullable = true)
+ |-- itemid: integer (nullable = true)
+ |-- transactionid: integer (nullable = true)
+
+
+===== MISSING VALUES =====
++---------+---------+-----+------+-------------+
+|timestamp|visitorid|event|itemid|transactionid|
++---------+---------+-----+------+-------------+
+|0        |0        |0    |0     |2733644      |
++---------+---------+-----+------+-------------+
+
+
+===== UNIQUE COUNTS =====
++---------------+------------+-------------------+
+|unique_visitors|unique_items|unique_transactions|
++---------------+------------+-------------------+
+|        1407580|      235061|              17672|
++---------------+------------+-------------------+
+
+
+===== EVENT DISTRIBUTION =====
++-----------+-------+
+|      event|  count|
++-----------+-------+
+|       view|2664312|
+|  addtocart|  69332|
+|transaction|  22457|
++-----------+-------+
+
+
+===== EVENT PERCENTAGES =====
++-----------+-------+------------------+
+|event      |count  |percentage        |
++-----------+-------+------------------+
+|view       |2664312|96.66960681049062 |
+|addtocart  |69332  |2.5155827017950356|
+|transaction|22457  |0.8148104877143472|
++-----------+-------+------------------+
+
+
+===== SAMPLE RECORDS =====
++-------------+---------+-----+------+-------------+
+|timestamp    |visitorid|event|itemid|transactionid|
++-------------+---------+-----+------+-------------+
+|1433221332117|257597   |view |355908|NULL         |
+|1433224214164|992329   |view |248676|NULL         |
+|1433221999827|111016   |view |318965|NULL         |
+|1433221955914|483717   |view |253185|NULL         |
+|1433221337106|951259   |view |367447|NULL         |
+|1433224086234|972639   |view |22556 |NULL         |
+|1433221923240|810725   |view |443030|NULL         |
+|1433223291897|794181   |view |439202|NULL         |
+|1433220899221|824915   |view |428805|NULL         |
+|1433221204592|339335   |view |82389 |NULL         |
++-------------+---------+-----+------+-------------+
+only showing top 10 rows
+

@@ -1,0 +1,118 @@
+26/10/14 11:38:21 WARN Utils: Your hostname, satwiq resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+26/10/14 11:38:21 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/10/14 11:38:23 INFO SparkContext: Running Spark version 3.5.8
+26/10/14 11:38:23 INFO SparkContext: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+26/10/14 11:38:23 INFO SparkContext: Java version 17.0.20.1
+26/10/14 11:38:23 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/10/14 11:38:23 INFO ResourceUtils: ==============================================================
+26/10/14 11:38:23 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/10/14 11:38:23 INFO ResourceUtils: ==============================================================
+26/10/14 11:38:23 INFO SparkContext: Submitted application: EnhancedPurchasePrediction
+26/10/14 11:38:23 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/10/14 11:38:23 INFO ResourceProfile: Limiting resource is cpu
+26/10/14 11:38:23 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/10/14 11:38:23 INFO SecurityManager: Changing view acls to: satwiqreddy
+26/10/14 11:38:23 INFO SecurityManager: Changing modify acls to: satwiqreddy
+26/10/14 11:38:23 INFO SecurityManager: Changing view acls groups to: 
+26/10/14 11:38:23 INFO SecurityManager: Changing modify acls groups to: 
+26/10/14 11:38:23 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: satwiqreddy; groups with view permissions: EMPTY; users with modify permissions: satwiqreddy; groups with modify permissions: EMPTY
+26/10/14 11:38:23 INFO Utils: Successfully started service 'sparkDriver' on port 35865.
+26/10/14 11:38:23 INFO SparkEnv: Registering MapOutputTracker
+26/10/14 11:38:23 INFO SparkEnv: Registering BlockManagerMaster
+26/10/14 11:38:23 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/10/14 11:38:23 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/10/14 11:38:23 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/10/14 11:38:23 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-41a4aeba-df5b-4396-89be-d02769e68b95
+26/10/14 11:38:23 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+26/10/14 11:38:23 INFO SparkEnv: Registering OutputCommitCoordinator
+26/10/14 11:38:23 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/10/14 11:38:23 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/10/14 11:38:24 INFO Executor: Starting executor ID driver on host 10.255.255.254
+26/10/14 11:38:24 INFO Executor: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+26/10/14 11:38:24 INFO Executor: Java version 17.0.20.1
+26/10/14 11:38:24 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/10/14 11:38:24 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@5223a3de for default.
+26/10/14 11:38:24 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41221.
+26/10/14 11:38:24 INFO NettyBlockTransferService: Server created on 10.255.255.254:41221
+26/10/14 11:38:24 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/10/14 11:38:24 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 41221, None)
+26/10/14 11:38:24 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:41221 with 434.4 MiB RAM, BlockManagerId(driver, 10.255.255.254, 41221, None)
+26/10/14 11:38:24 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 41221, None)
+26/10/14 11:38:24 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 41221, None)
+26/10/14 11:38:33 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:38:33 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:38:33 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:38:33 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:38:33 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:38:33 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:38:33 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:38:33 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:38:33 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:38:33 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:38:33 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:38:33 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:38:37 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:38:37 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:38:37 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:38:37 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:38:37 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:38:37 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:38:37 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:38:37 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:38:38 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:38:38 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:38:38 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:38:38 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:38:38 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:38:38 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:38:38 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+26/10/14 11:38:38 WARN RowBasedKeyValueBatch: Calling spill() on RowBasedKeyValueBatch. Will not spill but return 0.
+Training positives: 405
+Training negatives: 424497
+Validation rows: 90886
+Test rows: 90949
+
+Training: Enhanced Logistic Regression
+26/10/14 11:38:45 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.JNIBLAS
+26/10/14 11:38:45 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.VectorBLAS
+Saved enhanced Logistic Regression model.
+Enhanced Logistic Regression | threshold=0.9 | accuracy=0.9987 | precision=0.2889 | recall=0.1327 | F1=0.1818 | PR-AUC=0.0387 | TP=13 FP=32 TN=90819 FN=85
+
+Training: Enhanced Random Forest
+26/10/14 11:39:01 WARN DAGScheduler: Broadcasting large task binary with size 1236.5 KiB
+26/10/14 11:39:02 WARN DAGScheduler: Broadcasting large task binary with size 1660.9 KiB
+26/10/14 11:39:02 WARN DAGScheduler: Broadcasting large task binary with size 1228.3 KiB
+26/10/14 11:39:03 WARN DAGScheduler: Broadcasting large task binary with size 1234.3 KiB
+26/10/14 11:39:03 WARN DAGScheduler: Broadcasting large task binary with size 1234.3 KiB
+26/10/14 11:39:03 WARN DAGScheduler: Broadcasting large task binary with size 1234.6 KiB
+26/10/14 11:39:04 WARN DAGScheduler: Broadcasting large task binary with size 1234.3 KiB
+26/10/14 11:39:04 WARN DAGScheduler: Broadcasting large task binary with size 1234.3 KiB
+26/10/14 11:39:04 WARN DAGScheduler: Broadcasting large task binary with size 1234.6 KiB
+26/10/14 11:39:04 WARN DAGScheduler: Broadcasting large task binary with size 1234.3 KiB
+26/10/14 11:39:04 WARN DAGScheduler: Broadcasting large task binary with size 1234.3 KiB
+26/10/14 11:39:05 WARN DAGScheduler: Broadcasting large task binary with size 1234.6 KiB
+26/10/14 11:39:05 WARN DAGScheduler: Broadcasting large task binary with size 1234.3 KiB
+26/10/14 11:39:05 WARN DAGScheduler: Broadcasting large task binary with size 1234.3 KiB
+26/10/14 11:39:05 WARN DAGScheduler: Broadcasting large task binary with size 1234.6 KiB
+26/10/14 11:39:05 WARN DAGScheduler: Broadcasting large task binary with size 1234.3 KiB
+26/10/14 11:39:06 WARN DAGScheduler: Broadcasting large task binary with size 1234.3 KiB
+26/10/14 11:39:06 WARN DAGScheduler: Broadcasting large task binary with size 1234.6 KiB
+26/10/14 11:39:06 WARN DAGScheduler: Broadcasting large task binary with size 1234.3 KiB
+26/10/14 11:39:06 WARN DAGScheduler: Broadcasting large task binary with size 1234.3 KiB
+26/10/14 11:39:06 WARN DAGScheduler: Broadcasting large task binary with size 1234.6 KiB
+26/10/14 11:39:06 WARN DAGScheduler: Broadcasting large task binary with size 1234.3 KiB
+26/10/14 11:39:07 WARN DAGScheduler: Broadcasting large task binary with size 1234.3 KiB
+26/10/14 11:39:07 WARN DAGScheduler: Broadcasting large task binary with size 1234.6 KiB
+26/10/14 11:39:07 WARN DAGScheduler: Broadcasting large task binary with size 1234.3 KiB
+26/10/14 11:39:07 WARN DAGScheduler: Broadcasting large task binary with size 1234.3 KiB
+26/10/14 11:39:07 WARN DAGScheduler: Broadcasting large task binary with size 1234.6 KiB
+26/10/14 11:39:07 WARN DAGScheduler: Broadcasting large task binary with size 1234.3 KiB
+26/10/14 11:39:08 WARN DAGScheduler: Broadcasting large task binary with size 1234.3 KiB
+26/10/14 11:39:08 WARN DAGScheduler: Broadcasting large task binary with size 1234.6 KiB
+26/10/14 11:39:08 WARN DAGScheduler: Broadcasting large task binary with size 1235.5 KiB
+26/10/14 11:39:09 WARN DAGScheduler: Broadcasting large task binary with size 1241.3 KiB
+26/10/14 11:39:09 WARN DAGScheduler: Broadcasting large task binary with size 1241.3 KiB
+26/10/14 11:39:09 WARN DAGScheduler: Broadcasting large task binary with size 1241.3 KiB
+26/10/14 11:39:09 WARN DAGScheduler: Broadcasting large task binary with size 1241.3 KiB
+26/10/14 11:39:10 WARN DAGScheduler: Broadcasting large task binary with size 1183.2 KiB
+Enhanced Random Forest | threshold=0.9 | accuracy=0.9983 | precision=0.1358 | recall=0.1122 | F1=0.1229 | PR-AUC=0.0533 | TP=11 FP=70 TN=90781 FN=87

@@ -1,0 +1,100 @@
+26/10/14 11:25:11 WARN Utils: Your hostname, satwiq resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+26/10/14 11:25:11 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/10/14 11:25:13 INFO SparkContext: Running Spark version 3.5.8
+26/10/14 11:25:13 INFO SparkContext: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+26/10/14 11:25:13 INFO SparkContext: Java version 17.0.20.1
+26/10/14 11:25:13 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/10/14 11:25:13 INFO ResourceUtils: ==============================================================
+26/10/14 11:25:13 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/10/14 11:25:13 INFO ResourceUtils: ==============================================================
+26/10/14 11:25:13 INFO SparkContext: Submitted application: ImprovedEcommercePurchasePrediction
+26/10/14 11:25:13 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/10/14 11:25:13 INFO ResourceProfile: Limiting resource is cpu
+26/10/14 11:25:13 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/10/14 11:25:13 INFO SecurityManager: Changing view acls to: satwiqreddy
+26/10/14 11:25:13 INFO SecurityManager: Changing modify acls to: satwiqreddy
+26/10/14 11:25:13 INFO SecurityManager: Changing view acls groups to: 
+26/10/14 11:25:13 INFO SecurityManager: Changing modify acls groups to: 
+26/10/14 11:25:13 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: satwiqreddy; groups with view permissions: EMPTY; users with modify permissions: satwiqreddy; groups with modify permissions: EMPTY
+26/10/14 11:25:13 INFO Utils: Successfully started service 'sparkDriver' on port 45289.
+26/10/14 11:25:13 INFO SparkEnv: Registering MapOutputTracker
+26/10/14 11:25:13 INFO SparkEnv: Registering BlockManagerMaster
+26/10/14 11:25:13 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/10/14 11:25:13 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/10/14 11:25:13 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/10/14 11:25:13 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-2a4221a2-5585-4a30-8c24-cb6d65f45fd7
+26/10/14 11:25:13 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+26/10/14 11:25:13 INFO SparkEnv: Registering OutputCommitCoordinator
+26/10/14 11:25:14 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/10/14 11:25:14 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/10/14 11:25:14 INFO Executor: Starting executor ID driver on host 10.255.255.254
+26/10/14 11:25:14 INFO Executor: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+26/10/14 11:25:14 INFO Executor: Java version 17.0.20.1
+26/10/14 11:25:14 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/10/14 11:25:14 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@5223a3de for default.
+26/10/14 11:25:14 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 46163.
+26/10/14 11:25:14 INFO NettyBlockTransferService: Server created on 10.255.255.254:46163
+26/10/14 11:25:14 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/10/14 11:25:14 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 46163, None)
+26/10/14 11:25:14 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:46163 with 434.4 MiB RAM, BlockManagerId(driver, 10.255.255.254, 46163, None)
+26/10/14 11:25:14 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 46163, None)
+26/10/14 11:25:14 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 46163, None)
+Total events: 2756101
+
+===== DATASET =====
++-----+------+
+|label| count|
++-----+------+
+|  1.0|   583|
+|  0.0|606154|
++-----+------+
+
+Total visitors: 606737
+Training positives: 411
+Training negatives: 424491
+Validation rows: 90886
+Test rows: 90949
+
+===== TRAINING AFTER UNDERSAMPLING =====
++-----+-----+
+|label|count|
++-----+-----+
+|  1.0|  411|
+|  0.0| 4150|
++-----+-----+
+
+26/10/14 11:25:32 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.JNIBLAS
+26/10/14 11:25:32 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.VectorBLAS
+
+===== VALIDATION THRESHOLD SEARCH =====
+Threshold=0.1 | Precision=0.0036 Recall=0.4405 F1=0.0071
+Threshold=0.2 | Precision=0.0081 Recall=0.2738 F1=0.0157
+Threshold=0.3 | Precision=0.0136 Recall=0.2262 F1=0.0256
+Threshold=0.4 | Precision=0.0200 Recall=0.1905 F1=0.0361
+Threshold=0.5 | Precision=0.0304 Recall=0.1905 F1=0.0525
+Threshold=0.6 | Precision=0.0285 Recall=0.1190 F1=0.0460
+Threshold=0.7 | Precision=0.0405 Recall=0.1190 F1=0.0604
+Threshold=0.8 | Precision=0.0493 Recall=0.0833 F1=0.0619
+Threshold=0.9 | Precision=0.0800 Recall=0.0714 F1=0.0755
+Selected validation threshold: 0.9
+Best validation F1: 0.0755
+
+===== FINAL TEST EVALUATION =====
+Selected threshold: 0.9
+Accuracy : 0.9984
+Precision: 0.1299
+Recall   : 0.1136
+F1-score : 0.1212
+PR-AUC   : 0.0564
+True positives : 10
+False positives: 67
+True negatives : 90794
+False negatives: 78
+
+===== CONFUSION MATRIX =====
+                 Predicted
+                 Buyer   Non-buyer
+Actual buyer         10       78
+Actual nonbuyer      67    90794
+
+Saved model, predictions and review metrics.
