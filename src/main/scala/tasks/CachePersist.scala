@@ -42,6 +42,10 @@ object CachePersist {
     println(f"   Result: $count2%,d records in ${time2}ms")
     println(s"   Speedup: ${(time1.toDouble/time2).formatted("%.1f")}x faster!")
 
+    // cache() and persist() operate on the same RDD here. Release MEMORY_ONLY
+    // before demonstrating a different storage level.
+    cachedRDD.unpersist(blocking = true)
+
     // Demo 2: persist()
     println("\n2. Demonstrating persist()")
     val persistedRDD = dataRDD.persist(StorageLevel.MEMORY_AND_DISK)
@@ -52,9 +56,8 @@ object CachePersist {
     println(f"   Persisted $count3%,d records")
 
     // Cleanup
-    cachedRDD.unpersist()
-    persistedRDD.unpersist()
-    println("\n3. Called unpersist() to free memory")
+    persistedRDD.unpersist(blocking = true)
+    println("\n3. Called unpersist() to free the persisted data")
 
     println("\nWhen to use cache/persist:")
     println("- When RDD is used multiple times")
